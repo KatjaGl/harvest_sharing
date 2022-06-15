@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+<<<<<<< HEAD
   before action:
 
   def index
@@ -35,5 +36,7 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :category)
   end
 end
+=======
+>>>>>>> master
 
 end
