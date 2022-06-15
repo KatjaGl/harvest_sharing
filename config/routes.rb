@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :products, only: [ :index, :show ]
 
-  end
+
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
+
+end
   # resources :messages
   # resources :gardens
   # resources :garden_products
