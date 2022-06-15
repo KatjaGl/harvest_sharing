@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+
+
+    get "products/:id", to: "products#show", as: :product
+    get "products/new", to: "products#new"
+    post "products", to: "products#create"
+
+    #
+
   # resources :users, only: [ :new, :show, :new, :create, :update, :edit, :delete]
   # resources :products, only: [ :index, :show ] do
   #   resources :chatrooms, only: [:show ]
