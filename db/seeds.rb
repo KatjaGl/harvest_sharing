@@ -9,12 +9,12 @@ Favorite.destroy_all
 p "favdestroy"
 Review.destroy_all
 p "review destroy"
+GardenProductCharacteristic.destroy_all
+p "gpc destroy"
 GardenProduct.destroy_all
 p "gp destroy"
 Garden.destroy_all
 p "gar destroy"
-GardenProductCharacteristic.destroy_all
-p "gpc destroy"
 Product.destroy_all
 p "pro destroy"
 Characteristic.destroy_all
@@ -22,7 +22,7 @@ p "cha destroy"
 User.destroy_all
 p "user destroy"
 
-user1 = User.create!(last_name: "lolo", first_name: "david", address: "32 av  ggggg", email: "jjj@live.fr", password: "azerty")
+user1 = User.create!(last_name: "lolo", first_name: "david", address: "32 av ggggg", email: "jjj@live.fr", password: "azerty")
 p "user create"
 garden1 = Garden.create!(name: "Fleur", address: "maier 5, nice", user_id: user1.id)
 p "garden create"
