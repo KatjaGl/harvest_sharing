@@ -1,0 +1,25 @@
+.garden-card {
+  display:flex;
+}
+
+
+.garden-card-infos {
+  display:flex;
+  justify-content: space-between;
+}
+
+
+.garden-card-button-voir {
+  background-color: rgb(31, 104, 31);
+  color:white;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.garden-card-button-voir:hover {
+  opacity: 1;
+}

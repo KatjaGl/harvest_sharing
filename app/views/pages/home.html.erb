@@ -1,2 +1,5 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+<%# Les 3 derniers jardins inscrits se trouvent dans @gardens (pages/CONTROLLER)%>
+<<% @garden = @gardens.first %>>
+<%= render 'shared/garden_card' %>
