@@ -22,7 +22,7 @@ p "cha destroy"
 User.destroy_all
 p "user destroy"
 
-user1 = User.create!(last_name: "lolo", first_name: "david", address: "32 av  ggggg", email: "jjj@live.fr", password: "azerty")
+user1 = User.create!(last_name: "lolo", first_name: "david", address: "32 av ggggg", email: "jjj@live.fr", password: "azerty")
 p "user create"
 user2 = User.create!(last_name: "Cama", first_name: "Maria", address: "22 rue de la fête 75001 Paris", email: "mariac@gmail.com", password: "maria1")
 user3 = User.create!(last_name: "Labella", first_name: "Manue", address: "33 av  ggggg", email: "3jj@live.fr", password: "azerty0")
