@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "garden/index";
+
+
+// Test des composants
+.test{
+  border: 2px solid red;
+}
+.test2{
+  border:2px solid blueviolet ;
+}

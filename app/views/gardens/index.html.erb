@@ -1,4 +1,4 @@
-<h1>LA NATURE NOUS RASSEMBLE</h1>
+<h2>LA NATURE NOUS RASSEMBLE</h2>
 <P>Choisir une ville</P> <p>Choissir un produit</p>
 <%= form_tag gardens_path, method: :get, id:'search-form' do %>
   <%= text_field_tag :query_product,
@@ -16,19 +16,26 @@
   %>
 <% end %>
 <%= link_to "trouver", class: "btn_trouver"%>
-<div class="gardens-display">
-  <div>
-<% if @gardens.empty? %>
-  <p>"Garden not found" </p>
+<div class="gardens-and-map">
+garden and map
+  <div class="map-display">
+  map display
   </div>
-<% else  %>
-  <div>
+  <div class="gardens-display">
+  garden display
+    <div>
+      <% if @gardens.empty? %>
+      <p>"Garden not found" </p>
+    </div>
+    <% else %>
+    <div>
 
-  <% @gardens.each do |garden| %>
+      <% @gardens.each do |garden| %>
 
 
 
-  <% end %>
-<% end %>
+      <% end %>
+    <% end %>
+    </div>
   </div>
 </div>

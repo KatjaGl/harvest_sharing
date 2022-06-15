@@ -1,0 +1,13 @@
+.gardens-and-map{
+display: flex;
+background-color: rgb(236, 236, 226);
+width: 1400px;
+height: 600px;
+}
+
+.map-display{
+width: 400px;
+background-color: green;
+display: flex;
+justify-content: right;
+}
