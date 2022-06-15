@@ -16,3 +16,15 @@ Rails.application.routes.draw do
 # resources :favorites
 # only: [:index, :show]do
 # resources
+
+Rails.application.routes.draw do
+  get "reviews/:id", to: "reviews#show", as: :review
+end
+
+Rails.application.routes.draw do
+  get "reviews/new", to: "reviews#new"
+end
+
+Rails.application.routes.draw do
+  post "reviews", to: "reviews#create"
+end
