@@ -15,12 +15,16 @@ class GardensController < ApplicationController
     end
   end
 
-  def show
 
+  def show
+  @chatroom = Chatroom.new
+  @garden = Garden.find(params[:id])
   end
 
 
+
   private
+
 
   def garden_params
     params.require(:garden).permit(:user_id, :name, :address, :detail)
