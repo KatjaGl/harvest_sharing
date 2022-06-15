@@ -1,0 +1,34 @@
+<h1>LA NATURE NOUS RASSEMBLE</h1>
+<P>Choisir une ville</P> <p>Choissir un produit</p>
+<%= form_tag gardens_path, method: :get, id:'search-form' do %>
+  <%= text_field_tag :query_product,
+    params[:query_product],
+    class: "form-control d-flex align-items-center justify-content-center localisation",
+    placeholder: "Courgette"
+  %>
+<% end %>
+
+<%=form_tag gardens_path, method: :get, id:'search-form' do %>
+  <%= text_field_tag :query_product,
+    params[:query_product],
+    class: "form-control d-flex align-items-center justify-content-center localisation",
+    placeholder: "Marseille"
+  %>
+<% end %>
+<%= link_to "trouver", class: "btn_trouver"%>
+<div class="gardens-display">
+  <div>
+<% if @gardens.empty? %>
+  <p>"Garden not found" </p>
+  </div>
+<% else  %>
+  <div>
+
+  <% @gardens.each do |garden| %>
+
+
+
+  <% end %>
+<% end %>
+  </div>
+</div>
