@@ -1,1 +1,32 @@
-<%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post %>
+<div class = "container" >
+  <h2><%= @garden.name %> </h2>
+  <div class = "img-jardin" >
+    <%= image_tag "tomate-potager.png", size:"500x150" %>
+  </div>
+  <div class = "card-product">
+    <%= image_tag "tomato.png", size:"50x50" %>
+    <h5> Tomate Grappe</h5>
+    <p> Une dizaine de plants de tomates, venez les chercher, elles sont savoureuses!</p>
+    <%# <h5> <%= @garden_products.quantity %>.kg</h5>
+    <p> icons </p>
+  </div>
+  <div class = garden-details>
+    <h5> Nom du jardinier</h5>
+    <p> Adresse du jardinier</p>
+    <h5>Quelques Mots</h5>
+    <p> Bonjour, je suis Amélie, je possède un beau potager 100% bio, je vous propose le surplus de mes récoltes!
+    N'hésitez pas à me contacter pour toutes questions, à bientôt!</p>
+  </div>
+  <div class = reviews>
+    <h5>LES AVIS</h5>
+    <P> USER ID</P>
+    <P> Un très bel échange avec Amélie, les tomates sont pleines de saveurs</P>
+    <%= image_tag "5-etoiles.png", size:"30x60" %>
+  </div>
+
+
+
+
+<%# <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post %>
+
+</div>
