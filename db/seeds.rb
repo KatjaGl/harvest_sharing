@@ -19,21 +19,26 @@ Product.destroy_all
 p "pro destroy"
 Characteristic.destroy_all
 p "cha destroy"
+Message.destroy_all
+p "mess destroy"
+Chatroom.destroy_all
+p "Chat destroy"
 User.destroy_all
 p "user destroy"
 
-user1 = User.create!(last_name: "Lopin", first_name: "Hervé", address: "32 avenue marius", email: "jjj@live.fr", password: "azerty")
+user1 = User.create!(nickname: "Maus", last_name: "lolo", first_name: "david", address: "32 av ggggg", email: "jjj@live.fr", password: "azerty")
 p "user create"
-user2 = User.create!(last_name: "Cama", first_name: "Maria", address: "22 rue de la fête 75001 Paris", email: "mariac@gmail.com", password: "maria1")
-user3 = User.create!(last_name: "Labella", first_name: "Manue", address: "33 av  gérard", email: "3jj@live.fr", password: "azerty0")
+user2 = User.create!(nickname: "Maus2", last_name: "Cama", first_name: "Maria", address: "22 rue de la fête 75001 Paris", email: "mariac@gmail.com", password: "maria1")
+user3 = User.create!(nickname: "Superman", last_name: "Labella", first_name: "Manue", address: "33 av  ggggg", email: "3jj@live.fr", password: "azerty0")
 p "user create"
-user4 = User.create!(last_name: "Laparisienne", first_name: "Jasmine", address: "23 rue de la fête 75001 Paris", email: "jas@gmail.com", password: "jas123")
-user5 = User.create!(last_name: "lacodeuse", first_name: "Katia", address: "25 av Loana", email: "jkj@live.fr", password: "azerty3")
+user4 = User.create!(nickname: "Sun", last_name: "Laparisienne", first_name: "Jasmine", address: "23 rue de la fête 75001 Paris", email: "jas@gmail.com", password: "jas123")
+user5 = User.create!(nickname: "Lune", last_name: "lacodeuse", first_name: "Katia", address: "25 av  ggggg", email: "jkj@live.fr", password: "azerty3")
+
 p "user create"
-user6 = User.create!(last_name: "lanormande", first_name: "soso", address: "3 rue de liège 75001 Paris", email: "soso@gmail.com", password: "soria1")
-user7 = User.create!(last_name: "maline", first_name: "laura", address: "32 av montaigne 75001 Paris", email: "jjmj@live.fr", password: "azert56")
+user6 = User.create!(nickname: "Lila", last_name: "lanormande", first_name: "soso", address: "3 rue de liège 75001 Paris", email: "soso@gmail.com", password: "soria1")
+user7 = User.create!(nickname: "Bleu", last_name: "maline", first_name: "laura", address: "32 av montaigne 75001 Paris", email: "jjmj@live.fr", password: "azert56")
 p "user create"
-user8 = User.create!(last_name: "super", first_name: "dorothée", address: "22 rue de la fête 76001 Rouen", email: "dodo@gmail.com", password: "mari5a1")
+user8 = User.create!(nickname: "Black", last_name: "super", first_name: "dorothée", address: "22 rue de la fête 76001 Rouen", email: "dodo@gmail.com", password: "mari5a1")
 
 garden1 = Garden.create!(name: "Fleur", address: "maier 5, nice", user_id: user1.id)
 p "garden create"
