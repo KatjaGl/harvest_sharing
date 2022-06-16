@@ -8,9 +8,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
                 <li class="nav-item">
-                    <a class="nav-link" href=""><i class=""></i>LES JARDINS</a>
+                    <%= link_to "LES JARDINS", gardens_path, class: "nav-link"  %>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href=""><i class=""></i>QUI SOMMES-NOUS ?</a>
@@ -25,15 +24,15 @@
                 </li>
 
                     <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
+
           <li class="nav-item">
-            <%= link_to "Log-out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            <%= link_to "SE DECONNECTER", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= image_tag "logo_harvest_sharing.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+            <%= image_tag "logo_harvest_sharing", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

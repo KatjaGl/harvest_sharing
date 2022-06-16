@@ -1,15 +1,30 @@
 // Specific CSS for your home-page
-h2 {
-
+h1 {
   font-family: 'Istok Web';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 58px;
   display: flex;
-  align-items: center;
-  text-align: center;
-
+  justify-content: space-evenly;
   color: #2D6413;
+}
 
+h2 {
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 58px;
+  display: flex;
+  justify-content: space-evenly;
+  color: #2D6413;
+}
+
+p {
+  color: black
+}
+
+.autres {
+  text-align: right;
 }
