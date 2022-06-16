@@ -18,7 +18,6 @@
   <%# <%= render 'shared/garden_card' %>
 
     <%= yield %>
-  <%= render 'shared/footer' %>
   <div>
     <%# <h1>Scroll To Top Button</h1> %>
       <button id="btnScrollToTop">
@@ -28,6 +27,7 @@
         <%# <i src="app/assets/images/logo_btn.jpg" class="image-tree">arrow_upward</i> %>
       </button>
   </div>
+  <%= render 'shared/footer' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </body>
 
