@@ -15,3 +15,9 @@ ActiveStorage.start()
 import "controllers"
 import "bootstrap"
 //import "navbar"
+import { btnScrollToTop } from "plugins/buttonscrol";
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your functions here, e.g:
+  btnScrollToTop();
+});
