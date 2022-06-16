@@ -1,5 +1,8 @@
 
-
+.navbar{
+  display: flex;
+  justify-content: space-evenly;
+}
 .navbar-logo{
 	padding: 15px;
 	color: #fff;
@@ -95,7 +98,6 @@
 	    -ms-flex-flow: row nowrap;
 	    flex-flow: row nowrap;
 	    -ms-flex-pack: start;
-	    justify-content: flex-start;
 	}
 	.navbar-expand-custom .navbar-nav {
 	    -ms-flex-direction: row;
