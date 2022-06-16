@@ -1,7 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1></h1>
+<p></p>
 <%# Les 3 derniers jardins inscrits se trouvent dans @gardens (pages/CONTROLLER)%>
-<<% @garden = @gardens.first %>>
-<%= render 'shared/garden_card' %>
+<% @gardens.each do |garden| %>
+<div class="garden-card">
+  <div class="garden-card-infos">
+    <div class= "garden-details">
+      <h4> <%=garden.name%> </h4>
+      <p><%=garden.address%></p>
+      <%= image_tag "jardin1.jpg", size: "100x100" %>
+      <p>Fruits/Légumes/Autres: <%# #icon %></p>
+    </div>
+  </div>
+  <div class= "button">
+  <div class="garden-card-button-voir">
+    <%= link_to "voir !", garden_path(garden) %>
 
-<h2>LES AVANTAGES DE HARVEST SHARING</h2>
+      </div>
+</div>
+ <% end %>
