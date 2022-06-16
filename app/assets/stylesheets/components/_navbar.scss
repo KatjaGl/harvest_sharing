@@ -42,22 +42,6 @@
 	background-color: transparent;
 	transition: all 0.7s;
 }
-#navbarSupportedContent a:not(:only-child):after {
-	content: "\f105";
-	position: absolute;
-	right: 20px;
-	top: 10px;
-	font-size: 14px;
-	font-family: "Font Awesome 5 Free";
-	display: inline-block;
-	padding-right: 3px;
-	vertical-align: middle;
-	font-weight: 900;
-	transition: 0.5s;
-}
-#navbarSupportedContent .active>a:not(:only-child):after {
-	transform: rotate(90deg);
-}
 
 .hori-selector .right,
 .hori-selector .left{
