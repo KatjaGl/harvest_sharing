@@ -17,7 +17,16 @@
   <%= render 'shared/flashes' %>
 
     <%= yield %>
- <%= render 'shared/footer' %>
+  <%= render 'shared/footer' %>
+  <div>
+    <%# <h1>Scroll To Top Button</h1> %>
+      <button id="btnScrollToTop">
+        <%# <a src="app/assets/images/logo_btn.jpg" class="image-tree"></a> %>
+        <%# <%= image_tag ("logo_btn"), class: "image-tree" %>
+        <%# button_tag(product.image_url) %>
+        <%# <i src="app/assets/images/logo_btn.jpg" class="image-tree">arrow_upward</i> %>
+      </button>
+  </div>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </body>
 
