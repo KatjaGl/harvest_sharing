@@ -1,11 +1,17 @@
 .garden-card {
   display:flex;
+  border: 1px solid orange;
+  height: 180px;
+  width: 375px;
+  background-color: greenyellow;
+
 }
 
 
 .garden-card-infos {
   display:flex;
   justify-content: space-between;
+  border:#4A4A4A
 }
 
 
