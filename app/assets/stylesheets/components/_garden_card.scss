@@ -1,31 +1,45 @@
-.garden-card {
-  display:flex;
-  border: 1px solid orange;
-  height: 180px;
-  width: 375px;
-  background-color: greenyellow;
-
+.garden-card{
+  border: 2px solid green;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  margin: 50px;
 }
 
-
-.garden-card-infos {
-  display:flex;
-  justify-content: space-between;
-  border:#4A4A4A
-}
-
-
-.garden-card-button-voir {
+.card-button-voir {
   background-color: rgb(31, 104, 31);
   color:white;
-  border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  width: 80px;
+  justify-content: center;
+  margin-left: 30px;
+
 }
 
 .garden-card-button-voir:hover {
   opacity: 1;
+}
+
+.garden_card_details{
+  display: flex;
+  margin-top: 30px;
+}
+
+.box{
+  display: flex;
+  justify-content: left;
+  justify-content: space-between;
+  }
+
+.garden-img{
+  border-radius: 50px;
+  margin-left: 7px;
+  margin-top: 5px;
+}
+
+.details_img{
+  display: flex;
 }
