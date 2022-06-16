@@ -33,6 +33,7 @@ user3 = User.create!(nickname: "Superman", last_name: "Labella", first_name: "Ma
 p "user create"
 user4 = User.create!(nickname: "Sun", last_name: "Laparisienne", first_name: "Jasmine", address: "23 rue de la fête 75001 Paris", email: "jas@gmail.com", password: "jas123")
 user5 = User.create!(nickname: "Lune", last_name: "lacodeuse", first_name: "Katia", address: "25 av  ggggg", email: "jkj@live.fr", password: "azerty3")
+
 p "user create"
 user6 = User.create!(nickname: "Lila", last_name: "lanormande", first_name: "soso", address: "3 rue de liège 75001 Paris", email: "soso@gmail.com", password: "soria1")
 user7 = User.create!(nickname: "Bleu", last_name: "maline", first_name: "laura", address: "32 av montaigne 75001 Paris", email: "jjmj@live.fr", password: "azert56")
