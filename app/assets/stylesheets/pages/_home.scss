@@ -45,7 +45,6 @@ p {
   display: flex;
   padding-left: 50px;
   align-items: center;
-
 }
 
 
@@ -61,10 +60,19 @@ p {
   color: white;
   background-color: #2D6413;
   height: 50px;
-
 }
 
 .text-home {
   display: flex;
 
+
+.box{
+ display: flex;
+justify-content: left;
+}
+
+.garden-card{
+  border: 2px solid green;
+  width: 350px;
+  height: 200px;
 }

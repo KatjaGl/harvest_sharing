@@ -1,6 +1,8 @@
+
 <div class="container" >
 
-<h1>LA NATURE NOUS RASSEMBLE</h1>
+<h1> LA NATURE NOUS RASSEMBLE </h1>
+
 
 <div class="search-home">
 
@@ -49,4 +51,19 @@
         </p>
       </div>
   </div>
+
+<div class="box">
+  <% @gardens.each do |garden| %>
+    <div class= "garden-card">
+        <h5><strong> <%=garden.name%></strong> </h5>
+        <p><%=garden.address%></p>
+        <p>Légumes <%# #icon %></p>
+        <%= image_tag "jardin1.jpg", size: "100x100" %>
+      </div>
+    </div>x
+      <div class="card-button-voir">
+      <%= link_to "voir", garden_path(garden) %>
+      </div>
+  <% end %>
+
 </div>
