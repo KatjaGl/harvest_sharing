@@ -1,10 +1,7 @@
-<nav class="navbar navbar-expand-custom navbar-mainbg">
-        <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<nav class="navbar navbar-expand-custom navbar-mainbg ">
+        <div class="navbar navbar-expand-sm navbar-light ">
 
-  <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag "logo_harvest_sharing", style:" border-radius :50% ; width: 70px"  %>
 
-    <% end %>
 
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="text-white"></i>
@@ -13,16 +10,40 @@
             <ul class="navbar-nav ml-auto">
                 <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class=""></i>LES JARDINS</a>
+                    <a class="nav-link" href=""><i class=""></i>LES JARDINS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class=""></i>QUI SOMMES-NOUS ?</a>
+                    <a class="nav-link" href=""><i class=""></i>QUI SOMMES-NOUS ?</a>
                 </li>
+
+  <%= link_to "/", class: "navbar-brand" do %>
+      <%= image_tag "logo_harvest_sharing", style:" border-radius :50% ; width: 70px"  %>
+    <% end %>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class=""></i>FAQ - CONTACT</a>
+                    <a class="nav-link" href=""><i class=""></i>FAQ - CONTACT</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class=""></i>CONNEXION</a>
+
+                    <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Log-out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <%= image_tag "newlogo.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "CONNEXION", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
                 </li>
 
             </ul>
