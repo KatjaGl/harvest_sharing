@@ -3,13 +3,13 @@
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
 >
   <h1>#<%= @chatroom.id %></h1>
-<h2>Your chat with <%= @chatroom.recipient.first_name %>  </h2>
+  <h2>Your chat with <%= @chatroom.recipient.first_name %>  </h2>
   <div class="messages" data-chatroom-subscription-target="messages">
   <% @chatroom.messages.each do |message| %>
     <%= render "messages/message", message: message %>
   <% end %>
 </div>
-
+<div>
 <%= simple_form_for [@chatroom, @message],
   remote: true,
   html: {data: {action: "ajax:success->chatroom-subscription#resetForm"}, class: "d-flex" } do |f|
