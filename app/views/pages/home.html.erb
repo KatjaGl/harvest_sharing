@@ -29,11 +29,11 @@
 <br>
 <p> Les derniers ajouts <p>
 
-  <div class="box">
+<div class="box">
   <% @gardens.each do |garden| %>
-    <div class= "garden-card">
+  <div class= "garden-card">
       <h5><strong> <%=garden.name%></strong> </h5>
-      <div class="details_img">
+     <div class="details_img">
       <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
         <div class="garden_card_details">
           <p><%=garden.address%></p>
@@ -43,32 +43,27 @@
       <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
     </div>
 <% end %>
-
 </div>
 <br>
 <br>
 
 <h1>LES AVANTAGES DE HARVEST SHARING</h1>
-
-  <div class="text-home">
-    <div class="col-sm-6 text-start">
-      <h2> Pour les autres: </h2>
-        <p> Pour permettre à d'autres personnes d'avoir accès à de bons fruits et légumes qui ont poussé le plus naturellement possible près de chez elles.
+<div class="text-home">
+  <div class="col-sm-6 text-start">
+    <h2> Pour les autres: </h2>
+    <p> Pour permettre à d'autres personnes d'avoir accès à de bons fruits et légumes qui ont poussé le plus naturellement possible près de chez elles.
             Pour démocratiser l'accès à certains produits devenus chers alors qu'ils pourrissent dans les jardins.
             Pour refaire découvrir des saveurs qui se sont perdues.
-
-
-      <div class="vous1"><img src="https://res.cloudinary.com/drizziyom/image/upload/v1655464542/harvest%20sharing%20logo/photo1_crcxs3.jpg" style="width: 400px;">
-      </div>
-        </p>
+    <div class="vous1"><img src="https://res.cloudinary.com/drizziyom/image/upload/v1655464542/harvest%20sharing%20logo/photo1_crcxs3.jpg" style="width: 400px;">
     </div>
-    <div class="col-sm-6 text-start">
-      <div class="vous"> <img src="https://res.cloudinary.com/drizziyom/image/upload/v1655462386/harvest%20sharing%20logo/PhotoPanier_rt8iaq.png" style="width: 400px;">
-      </div>
-        <h2> Et pour vous aussi : </h2>
-          <p> Pour faire de belles rencontres avec des personnes sensibles aux mêmes valeurs que vous.
-            Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.
-        </p>
-      </div>
-    </div>
+    </p>
   </div>
+  <div class="col-sm-6 text-start">
+    <div class="vous"> <img src="https://res.cloudinary.com/drizziyom/image/upload/v1655462386/harvest%20sharing%20logo/PhotoPanier_rt8iaq.png" style="width: 400px;">
+    </div>
+      <h2> Et pour vous aussi : </h2>
+      <p> Pour faire de belles rencontres avec des personnes sensibles aux mêmes valeurs que vous.
+            Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.
+      </p>
+  </div>
+</div>
