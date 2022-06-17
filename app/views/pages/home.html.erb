@@ -1,33 +1,50 @@
 
 <div class="container" >
-
 <h1> LA NATURE NOUS RASSEMBLE </h1>
 
+  <div class="search-home">
 
-<div class="search-home">
-
-  <div class="ville">
-    <p>Choisir une ville</p>
+    <div class="ville">
+      <p>Choisir une ville</p>
       <%= form_tag gardens_path, method: :get, id:'search-form' do %>
       <%= text_field_tag :query_product,
       params[:query_product],
       class: "form-control d-flex align-items-center justify-content-center localisation",
       placeholder: "Marseille"%>
-  </div>
+    </div>
 
   <div class="produit">
-  <p>Choisir un produit</p>
+    <p>Choisir un produit</p>
       <%= text_field_tag :query_product,
       params[:query_product],
       class: "form-control d-flex align-items-center justify-content-center localisation",
       placeholder: "Courgette" %>
-
   </div>
+
 <%= submit_tag "TROUVEZ!", class: "btn btn-success" %>
       <% end %>
 
 </div>
+<br>
+<br>
+<p> Les derniers ajouts <p>
 
+  <div class="box">
+  <% @gardens.each do |garden| %>
+    <div class= "garden-card">
+      <h5><strong> <%=garden.name%></strong> </h5>
+      <div class="details_img">
+      <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
+        <div class="garden_card_details">
+          <p><%=garden.address%></p>
+        <%# <p>Légumes/fruits <%# #icon %>
+        </div>
+      </div>
+      <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
+    </div>
+<% end %>
+
+</div>
 <br>
 <br>
 
@@ -50,21 +67,6 @@
             Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.
         </p>
       </div>
-  </div>
-
-<div class="box">
-  <% @gardens.each do |garden| %>
-    <div class= "garden-card">
-      <h5><strong> <%=garden.name%></strong> </h5>
-      <div class="details_img">
-      <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
-        <div class="garden_card_details">
-          <p><%=garden.address%></p>
-        <%# <p>Légumes/fruits <%# #icon %>
-        </div>
-      </div>
-      <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
     </div>
-<% end %>
-
+  </div>
 </div>
