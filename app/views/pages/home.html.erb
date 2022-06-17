@@ -9,8 +9,8 @@
       <%= form_tag gardens_path, method: :get, id:'search-form' do %>
       <%= text_field_tag :query_product,
       params[:query_product],
-      class: "form-control d-flex align-items-center justify-content-center localisation",
-      placeholder: "Marseille"%>
+      class: "form-control d-flex align-items- justify-content-center localisation",
+      placeholder: "ex : Marseille"%>
     </div>
 
   <div class="produit">
@@ -18,7 +18,7 @@
       <%= text_field_tag :query_product,
       params[:query_product],
       class: "form-control d-flex align-items-center justify-content-center localisation",
-      placeholder: "Courgette" %>
+      placeholder: "ex : Courgette" %>
   </div>
 
 <%= submit_tag "TROUVEZ!", class: "btn btn-success" %>
@@ -27,7 +27,7 @@
 </div>
 <br>
 <br>
-<p> Les derniers ajouts <p>
+<h2> Les derniers ajouts </h2>
 
   <div class="box">
   <% @gardens.each do |garden| %>
@@ -53,22 +53,22 @@
   <div class="text-home">
     <div class="col-sm-6 text-start">
       <h2> Pour les autres: </h2>
-        <p> Pour permettre à d'autres personnes d'avoir accès à de bons fruits et légumes qui ont poussé le plus naturellement possible près de chez elles.
-            Pour démocratiser l'accès à certains produits devenus chers alors qu'ils pourrissent dans les jardins.
-            Pour refaire découvrir des saveurs qui se sont perdues.
+        <p> Pour permettre à d'autres personnes d'avoir accès à de bons fruits et légumes qui ont poussé le plus naturellement possible près de chez elles.</p>
+            <p> Pour démocratiser l'accès à certains produits devenus chers alors qu'ils pourrissent dans les jardins.</p>
+            <p> Pour refaire découvrir des saveurs qui se sont perdues.</p>
 
 
       <div class="vous1"><img src="/assets/photo1.jpg" style="width: 400px;">
       </div>
-        </p>
+
     </div>
     <div class="col-sm-6 text-start">
       <div class="vous"> <img src="/assets/PhotoPanier.png" style="width: 400px;">
       </div>
         <h2> Et pour vous aussi : </h2>
-          <p> Pour faire de belles rencontres avec des personnes sensibles aux mêmes valeurs que vous.
-            Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.
-        </p>
+          <p> Pour faire de belles rencontres avec des personnes sensibles aux mêmes valeurs que vous.</p>
+            <p> Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.</p>
+
       </div>
     </div>
   </div>
