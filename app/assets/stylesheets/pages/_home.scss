@@ -28,3 +28,52 @@ p {
 .autres {
   text-align: right;
 }
+
+
+.container{
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 20px;
+
+}
+
+.search-home {
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+}
+
+
+#search-form {
+  width: 500px;
+}
+
+.produit {
+  width: 500px;
+}
+
+.btn {
+  color: white;
+  background-color: #2D6413;
+  height: 50px;
+}
+
+.text-home {
+  display: flex;
+
+
+.box{
+ display: flex;
+justify-content: left;
+}
+
+.garden-card{
+  border: 2px solid green;
+  width: 350px;
+  height: 200px;
+}
