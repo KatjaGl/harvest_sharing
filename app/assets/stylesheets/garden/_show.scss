@@ -1,7 +1,43 @@
-.container {
-  border: 1px solid orangered;
+
+.card-product{
+background-color: rgb(149, 201, 149);
+width: 500px;
+margin-top: 20px;
+}
+.img-jardin{
+display: flex;
+align-items: left;
 }
 
-.garden-details {
-border: 1px solid black;
+.gardener-details {
+padding: 50px;
+align-items: right;
+}
+
+.reviews{
+height:120px ;
+background-color:rgb(154, 229, 147);
+}
+
+.button-contacter {
+  color: white;
+  background-color: orangered;
+  border: 1px solid orangered;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.button-contacter:hover {
+opacity: 1;
+}
+
+.garden-gardener{
+display: flex;
+}
+
+.avatar{
+  border-radius: 50%;
 }
