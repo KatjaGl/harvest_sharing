@@ -29,11 +29,11 @@
 <br>
 <h2> Les derniers ajouts </h2>
 
-  <div class="box">
+<div class="box">
   <% @gardens.each do |garden| %>
-    <div class= "garden-card">
+  <div class= "garden-card">
       <h5><strong> <%=garden.name%></strong> </h5>
-      <div class="details_img">
+     <div class="details_img">
       <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
         <div class="garden_card_details">
           <p><%=garden.address%></p>
@@ -43,7 +43,6 @@
       <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
     </div>
 <% end %>
-
 </div>
 <br>
 <br>
@@ -70,5 +69,11 @@
             <p> Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.</p>
 
       </div>
+
     </div>
+      <h2> Et pour vous aussi : </h2>
+      <p> Pour faire de belles rencontres avec des personnes sensibles aux mêmes valeurs que vous.
+            Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.
+      </p>
   </div>
+</div>

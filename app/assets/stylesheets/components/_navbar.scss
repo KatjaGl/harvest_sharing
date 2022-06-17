@@ -3,9 +3,10 @@
   display: flex;
   justify-content: space-evenly;
 }
+
 .navbar-logo{
-	padding: 15px;
-	color: #fff;
+  width: 100px;
+  border-radius: 50%;
 }
 .navbar-mainbg{
 	background-color: #B4DB74;
@@ -30,7 +31,7 @@
 #navbarSupportedContent ul li a{
 	color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 25px;
     display: block;
     padding: 20px 20px;
     transition-duration:0.6s;
@@ -41,39 +42,6 @@
 	color: #2b3e0c;
 	background-color: transparent;
 	transition: all 0.7s;
-}
-
-.hori-selector .right,
-.hori-selector .left{
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	background-color: white;
-	bottom: 10px;
-}
-.hori-selector .right{
-	right: -25px;
-}
-.hori-selector .left{
-	left: -25px;
-}
-.hori-selector .right:before,
-.hori-selector .left:before{
-	content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #B4DB74;
-
-}
-.hori-selector .right:before{
-	bottom: 0;
-    right: -25px;
-}
-.hori-selector .left:before{
-	bottom: 0;
-    left: -25px;
 }
 
 
