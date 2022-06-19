@@ -19,26 +19,37 @@
     <%= submit_tag "TROUVEZ!", class: "btn btn-success" %>
     <% end %>
   </div>
-  <div class="gardens-and-map">
+  <%# <div class="gardens-and-map">
     <div class="gardens-index">
-      <div class="garden_box">
-        <% @gardens.each do |garden| %>
-        <div class= "garden-card">
-          <h5><strong> <%=garden.name%></strong> </h5>
+      <div class="garden_box"> %>
+        <%# <% @gardens.each do |garden| %>
+        <%# <div class= "garden-card">
           <div class="details_img">
-            <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
-            <div class="garden_card_details">
-              <p><%=garden.address%></p>
+          <h5><strong> <%=garden.name</strong></h5>
+            <%# <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
+            <%# <div class="garden_card_details">
+              <p><%=garden.address</p>
               <%# <p>Légumes/fruits <%# #icon %>
-            </div>
-          </div>
-          <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
-        </div>
+            <%# </div>
+          </div> %>
+          <%# <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
+        <%# </div>
         <% end %>
+      <%# </div>
+    </div>  %>
+
+  <div class="box-garden">
+    <%= link_to garden_path(garden) do %>
+      <div class="garden-card-home card-garden">
       </div>
+    <% end %>
+    <div class="card-garden-infos">
+
+    <% @gardens.each do |garden| %>
+    <h5><strong> <%=garden.name%></strong> </h5>
+    <p><%=garden.address%></p>
     </div>
-    <%# <div class="map-display">
-    map display
-    </div> %>
+    <p class="card-garden-icon">icon</p>
   </div>
+  <% end %>
 </div>
