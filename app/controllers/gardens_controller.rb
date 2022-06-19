@@ -16,8 +16,8 @@ class GardensController < ApplicationController
   end
 
   def show
-  # @chatroom = Chatroom.new
-  @garden = Garden.find(params[:id])
+    # @chatroom = Chatroom.new
+    @garden = Garden.find(params[:id])
   end
 
   private
