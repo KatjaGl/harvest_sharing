@@ -1,67 +1,67 @@
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-evenly;
 }
 
-.navbar-logo{
+.navbar-logo {
   width: 100px;
   border-radius: 50%;
 }
-.navbar-mainbg{
+.navbar-mainbg {
 	background-color: #B4DB74;
 	padding: 0px;
 
 }
-#navbarSupportedContent{
+#navbarSupportedContent {
 	overflow: hidden;
 	position: relative;
 }
-#navbarSupportedContent ul{
+#navbarSupportedContent ul {
 	padding: 0px;
 	margin: 0px;
 }
-#navbarSupportedContent ul li a i{
+#navbarSupportedContent ul li a i {
 	margin-right: 10px;
 }
 #navbarSupportedContent li {
 	list-style-type: none;
 	float: left;
 }
-#navbarSupportedContent ul li a{
+#navbarSupportedContent ul li a {
 	color: white;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-    padding: 20px 20px;
-    transition-duration:0.6s;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  padding: 20px 20px;
+  transition-duration:0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    position: relative;
+  position: relative;
 }
-#navbarSupportedContent>ul>li.active>a{
+#navbarSupportedContent>ul>li.active>a {
 	color: #2b3e0c;
 	background-color: transparent;
 	transition: all 0.7s;
 }
 
 
-@media(min-width: 992px){
+@media(min-width: 992px) {
 	.navbar-expand-custom {
-	    -ms-flex-flow: row nowrap;
-	    flex-flow: row nowrap;
-	    -ms-flex-pack: start;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
 	}
 	.navbar-expand-custom .navbar-nav {
-	    -ms-flex-direction: row;
-	    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
 	}
 	.navbar-expand-custom .navbar-toggler {
-	    display: none;
+	  display: none;
 	}
 	.navbar-expand-custom .navbar-collapse {
-	    display: -ms-flexbox!important;
-	    display: flex!important;
-	    -ms-flex-preferred-size: auto;
-	    flex-basis: auto;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
 	}
 }

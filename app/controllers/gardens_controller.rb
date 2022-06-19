@@ -1,6 +1,6 @@
 class GardensController < ApplicationController
-  before_action :set_garden, only: [:new, :create]
-  skip_before_action :authenticate_user!, only: [:new, :create, :index]
+  before_action :set_garden, only: %i[new create]
+  skip_before_action :authenticate_user!, only: %i[new create index]
 
   def index
     if params[:query_product].present?
@@ -15,17 +15,12 @@ class GardensController < ApplicationController
     end
   end
 
-
   def show
   # @chatroom = Chatroom.new
   @garden = Garden.find(params[:id])
-
   end
 
-
-
   private
-
 
   def garden_params
     params.require(:garden).permit(:user_id, :name, :address, :detail)

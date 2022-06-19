@@ -1,47 +1,46 @@
 
-.card-product{
-background-color: rgb(149, 201, 149);
-width: 450px;
-height: 200px;
-margin-top: 20px;
+.card-product {
+  background-color: rgb(149, 201, 149);
+  width: 450px;
+  height: 200px;
+  margin-top: 20px;
 }
-.img-jardin{
-display: flex;
-align-items: left;
+.img-jardin {
+  display: flex;
+  align-items: left;
 }
 
 .gardener-details {
-padding: 50px;
-align-items: right;
-background-color: rgba(255, 166, 0, 0.767);
-margin-left: 20px;
+  padding: 50px;
+  align-items: right;
+  background-color: rgba(255, 166, 0, 0.767);
+  margin-left: 20px;
 }
 
-.jardin{
+.jardin {
   width: 450px;
   height: 250px;
 }
 
-.reviews{
-height:120px ;
-background-color:rgb(154, 229, 147);
-margin-top: 20px;
-
+.reviews {
+  height:120px;
+  background-color:rgb(154, 229, 147);
+  margin-top: 20px;
 }
 
-.garden-gardener{
-display: flex;
+.garden-gardener {
+  display: flex;
 }
 
 .avatar{
-border-radius: 50%;
+  border-radius: 50%;
 }
 
-.card-details{
+.card-details {
   display: flex;
   margin-top: 30px;
 }
 
-.tomate{
-border-radius: 50%;
+.tomate {
+  border-radius: 50%;
 }

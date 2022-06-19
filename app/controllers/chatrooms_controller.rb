@@ -1,6 +1,6 @@
 class ChatroomsController < ApplicationController
-  before_action :set_chatroom, only: [ :show ]
-  skip_before_action :authenticate_user!, only: [ :create, :show, :index ]
+  before_action :set_chatroom, only: [:show]
+  skip_before_action :authenticate_user!, only: %i[create show index]
 
   def index
     @chatroom = Chatroom.all
@@ -8,7 +8,6 @@ class ChatroomsController < ApplicationController
 
   def show
     @message = Message.new
-
   end
 
   def create
@@ -28,6 +27,7 @@ class ChatroomsController < ApplicationController
   # def chat_params
   #   params.require(:chat).permit(:sender_id, :recipient_id)
   # end
+
   def chatroom_exist?(chatrooms, recipient_id, sender_id)
     if !chatrooms.where(sender_id: sender_id).find_by_recipient_id(recipient_id).nil?
       return chatrooms.where(sender_id: sender_id).find_by_recipient_id(recipient_id)
@@ -35,12 +35,10 @@ class ChatroomsController < ApplicationController
       return chatrooms.where(sender_id: recipient_id).find_by_recipient_id(sender_id)
     else
       return false
-
     end
   end
 
   def set_chatroom
     @chatroom = Chatroom.find(params[:id])
   end
-
 end
