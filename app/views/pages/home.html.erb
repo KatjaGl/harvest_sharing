@@ -8,21 +8,12 @@
   <br>
   <br>
   <h2> Les derniers ajouts </h2>
-  <div class="box">
-    <% @gardens.each do |garden| %>
-      <div class= "garden-card">
-        <h5><strong> <%=garden.name%></strong> </h5>
-        <div class="details_img">
-          <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
-          <div class="garden_card_details">
-            <p><%=garden.address%></p>
-            <%# <p>Légumes/fruits <%# #icon %>
-          </div>
-        </div>
-        <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
-      </div>
-    <% end %>
-  </div>
+    <div class="box-gardens">
+      <% @gardens.each do |garden| %>
+      <%= render "./gardens/card", garden:garden %>
+      <% end %>
+    </div>
+
   <br>
   <br>
   <h1>LES AVANTAGES DE HARVEST SHARING</h1>
