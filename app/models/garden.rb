@@ -6,6 +6,7 @@ class Garden < ApplicationRecord
   validates :name, presence: true
   validates :address, presence: true
   validates :user_id, presence: true
+  # has_one_attached :photo
 
   # include PgSearch::Model
   # multisearchable :against => [:name, product_name]
