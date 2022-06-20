@@ -36,3 +36,9 @@ html, body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
 }
+
+
+body{
+  background: image-url("background.png");
+  background-size: cover;
+}
