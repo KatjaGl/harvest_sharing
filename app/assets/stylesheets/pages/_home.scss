@@ -30,13 +30,6 @@ p {
 }
 
 
-.container{
-  text-align: center;
-  justify-content: space-between;
-  margin-top: 20px;
-  border-radius: 20px;
-}
-
 .search-home {
   text-align: center;
   justify-content: space-between;
@@ -78,12 +71,14 @@ p {
 }
 .text-home {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+
 }
 
 .box {
   display: flex;
-  justify-content: left;
+  justify-content: center;
+  justify-content: space-between;
 }
 
 

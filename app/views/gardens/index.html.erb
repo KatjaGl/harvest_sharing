@@ -19,28 +19,10 @@
     <%= submit_tag "TROUVEZ!", class: "btn btn-success" %>
     <% end %>
   </div>
-  <%# <div class="gardens-and-map">
-    <div class="gardens-index">
-      <div class="garden_box"> %>
-        <%# <% @gardens.each do |garden| %>
-        <%# <div class= "garden-card">
-          <div class="details_img">
-          <h5><strong> <%=garden.name</strong></h5>
-            <%# <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
-            <%# <div class="garden_card_details">
-              <p><%=garden.address</p>
-              <%# <p>Légumes/fruits <%# #icon %>
-            <%# </div>
-          </div> %>
-          <%# <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
-        <%# </div>
-        <% end %>
-      <%# </div>
-    </div>  %>
 
   <div class="box-gardens">
     <% @gardens.each do |garden| %>
-     <%= render "card", garden:garden %>
+    <%= render "card", garden:garden %>
     <% end %>
   </div>
 
