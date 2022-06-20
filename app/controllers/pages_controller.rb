@@ -4,6 +4,4 @@ class PagesController < ApplicationController
   def home
     @gardens = Garden.last(3)
   end
-
-
 end
