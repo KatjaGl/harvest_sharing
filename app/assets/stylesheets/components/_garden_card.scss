@@ -1,12 +1,32 @@
-// .garden-card {
-//   box-shadow: 5px 2px 1px rgb(153, 200, 164);
-//   width: 350px;
-//   height: 200px;
-//   text-align: center;
-//   margin: 20px;
-//   border-radius: 5px;
-//   margin-top: 30px;
-// }
+.garden-card {
+
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+  background-image: url("jardin1.jpg");
+
+}
+
+
+
+.box-garden {
+  border-radius: 15%;
+
+  width: 100%;
+  object-fit: cover;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+
+.box-garden .card-garden-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
 // .card-button-voir {
 //   background-color: rgb(31, 104, 31);
@@ -50,39 +70,6 @@
 //   background-image: url("jardin1.jpg");
 //   border-radius: 15%;
 // }
-.box-garden {
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.box-garden {
-  background-image: url("jardin1.jpg");
-  border-radius: 15%;
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-// .card-trip h2 {
-//   font-size: 16px;
-//   font-weight: bold;
-//   margin: 0;
-// }
-
-// .card-trip p {
-//   font-size: 12px;
-//   opacity: .7;
-//   margin: 0;
-// }
-
-
-.box-garden .card-garden-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
 
 // .card-garden-infos .card-trip-user {
 //   position: absolute;
