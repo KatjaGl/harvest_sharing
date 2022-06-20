@@ -18,6 +18,12 @@ class GardensController < ApplicationController
   def show
     # @chatroom = Chatroom.new
     @garden = Garden.find(params[:id])
+
+    @marker =
+      {
+        lat: @garden.latitude,
+        lng: @garden.longitude
+      }
   end
 
   private
