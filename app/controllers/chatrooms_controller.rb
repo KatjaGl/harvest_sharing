@@ -1,7 +1,5 @@
 class ChatroomsController < ApplicationController
   before_action :set_chatroom, only: [:show]
-
-
   def index
     @chatroom = Chatroom.all
   end

@@ -6,10 +6,12 @@ $dark: #777777;
 // body {
 //   background: linear-gradient(to bottom left, $primary 40%, $white 100%);
 // }
-
+.own_message {
+  text-align: right;
+  background-color: black !important;
+}
 .container_message {
   display: flex;
-  align-items: center;
   margin-bottom: 8px;
   background: transparent;
   padding: 8px 16px;
