@@ -127,7 +127,27 @@ product20.photos.attach(io: File.open('app/assets/images/seed/abricot.jpg'), fil
 product20.photos.attach(io: File.open('app/assets/images/seed/abricotier.jpg'), filename: "abricotier.jpg", content_type: "image/jpg")
 
 gardenProduct1 = GardenProduct.create!(product_id: product1.id, garden_id: garden1.id, quantity: "30")
+gardenProduct1 = GardenProduct.create!(product_id: product14.id, garden_id: garden1.id, quantity: "10")
 gardenProduct2 = GardenProduct.create!(product_id: product2.id, garden_id: garden2.id, quantity: "50")
+gardenProduct2 = GardenProduct.create!(product_id: product15.id, garden_id: garden2.id, quantity: "50")
+gardenProduct3 = GardenProduct.create!(product_id: product3.id, garden_id: garden2.id, quantity: "50")
+gardenProduct3 = GardenProduct.create!(product_id: product4.id, garden_id: garden1.id, quantity: "30")
+gardenProduct4 = GardenProduct.create!(product_id: product16.id, garden_id: garden1.id, quantity: "10")
+gardenProduct4 = GardenProduct.create!(product_id: product5.id, garden_id: garden2.id, quantity: "50")
+gardenProduct5 = GardenProduct.create!(product_id: product17.id, garden_id: garden2.id, quantity: "50")
+gardenProduct5 = GardenProduct.create!(product_id: product6.id, garden_id: garden2.id, quantity: "50")
+gardenProduct6 = GardenProduct.create!(product_id: product18.id, garden_id: garden1.id, quantity: "30")
+gardenProduct6 = GardenProduct.create!(product_id: product7.id, garden_id: garden1.id, quantity: "10")
+gardenProduct7 = GardenProduct.create!(product_id: product19.id, garden_id: garden2.id, quantity: "50")
+gardenProduct7 = GardenProduct.create!(product_id: product8.id, garden_id: garden2.id, quantity: "50")
+gardenProduct8 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "50")
+gardenProduct8 = GardenProduct.create!(product_id: product9.id, garden_id: garden1.id, quantity: "30")
+gardenProduct9 = GardenProduct.create!(product_id: product10.id, garden_id: garden1.id, quantity: "10")
+gardenProduct9 = GardenProduct.create!(product_id: product11.id, garden_id: garden2.id, quantity: "50")
+gardenProduct10 = GardenProduct.create!(product_id: product12.id, garden_id: garden2.id, quantity: "50")
+gardenProduct10 = GardenProduct.create!(product_id: product13.id, garden_id: garden2.id, quantity: "50")
+
+
 
 # gardenProductCharacteristic1 = GardenProductCharacteristic.create!(garden_product_id: gardenProduct1.id, characteristic_id: characteristic1.id )
 
