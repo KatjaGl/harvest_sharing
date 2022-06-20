@@ -28,8 +28,12 @@ a{
   color: orange;
 } */
 
-.fooButtons{
+.fooButtons {
   font-size: 40px;
+}
+
+.fooButtons a {
+ text-decoration: none;
 }
 
 .titre-news {

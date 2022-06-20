@@ -1,7 +1,18 @@
-<div id="message-<%= message.id %>">
-  <small>
-    <strong><%= message.user.nickname %></strong>
-    <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-  </small>
-  <p><%= message.content %></p>
+<div class="container_message<% if current_user.id === message.user_id %> own_message<% end %>">
+  <div class="row">
+    <div class="message-box col-12 col-md-6 col-lg-4">
+      <div class="message-text" id="message-<%= message.id %>" data-message="<%= message.id %>">
+
+        <p><small>
+          <strong><%= message.user.nickname.capitalize %></strong>
+          <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+        </small></p>
+        <p><%= message.content %></p>
+      </div>
+    </div>
+    <%# <div class="notification-actions col-12 col-lg-6">
+      <a href="#">Modifier <i class="fas fa-pencil-alt"></i></a>
+      <a href="#">Suprimer <i class="far fa-trash-alt"></i></a>
+    </div> %>
+  </div>
 </div>

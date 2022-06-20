@@ -3,7 +3,7 @@ h1 {
   font-family: 'Istok Web';
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 58px;
   display: flex;
   justify-content: space-evenly;
@@ -14,7 +14,7 @@ h2 {
   font-family: 'Istok Web';
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 58px;
   display: flex;
   justify-content: space-evenly;
@@ -23,6 +23,7 @@ h2 {
 
 p {
   color: black;
+  font-size: 15px;
 }
 
 .autres {
@@ -100,10 +101,10 @@ p {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.col-sm-6 {
-  flex: 0 0 auto;
-  width: 50%;
-}
+// .col-sm-6 {
+//   flex: 0 0 auto;
+//   width: 50%;
+// }
 
 *, *::before, *::after {
   box-sizing: border-box;

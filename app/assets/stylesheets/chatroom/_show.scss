@@ -1,0 +1,76 @@
+$primary: #6fcdaf;
+$white: #F9FBFF;
+$dark: #777777;
+
+
+// body {
+//   background: linear-gradient(to bottom left, $primary 40%, $white 100%);
+// }
+.own_message {
+  text-align: right;
+  background-color: black !important;
+}
+.container_message {
+  display: flex;
+  margin-bottom: 8px;
+  background: transparent;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+  border-radius: 5%;
+}
+.container_message .message-box {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.container_message p {
+  margin: 0;
+  line-height: 1.4;
+  color: #777777;
+
+}
+
+.container_message small {
+  color: rgb(241, 203, 133);
+  font-weight: bold;
+}
+.container_message .notification-actions {
+  opacity: 10%;
+  display: flex;
+  transition: ease .3s;
+}
+
+.container_message:hover .notification-actions {
+  opacity: 1;
+}
+
+.container_message .notification-actions a {
+  color: $white;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.container_message .notification-actions a:hover {
+  color: #555555;
+}
+
+.flash {
+  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin: 15px;
+}
+
+.flash-success {
+  border: 2px solid #1EDD88;
+}
+
+.link_return {
+  display: flex;
+  justify-content: space-around;
+  color: #777777;
+}
