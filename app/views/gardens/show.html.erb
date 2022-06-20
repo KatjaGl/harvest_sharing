@@ -1,5 +1,11 @@
 <div class = "container" >
-<%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill %>
+
+<% @garden.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
+<%# cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill %>
+
   <div><h2> <%= @garden.name %> </h2>
   </div>
   <div class="garden-gardener">

@@ -10,7 +10,7 @@
   <h2> Les derniers ajouts </h2>
     <div class="box-gardens">
       <% @gardens.each do |garden| %>
-      <%= render "./gardens/card", garden:garden %>
+      <%= render "shared/card", garden:garden %>
       <% end %>
     </div>
 
