@@ -1,13 +1,20 @@
+<% if @chatroom %>
 <div class="container-chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
   <div class="row justify-content-center">
-    <h1>Bonjour <%= current_user.nickname %>!</h1>
-    <h2> Le jardin nom du jardin de  <%= @chatroom.recipient.nickname.capitalize %>. </h2>
-    <div class="messages col-lg-12 " style="margin:20px 22px 10px" data-chatroom-subscription-target="messages">
-      <% @chatroom.messages.each do |message| %>
-        <%= render "messages/message", message: message %>
-      <% end %>
+    <div class="col-12">
+      <h1>Bonjour <%= current_user.nickname %>!</h1>
+      <h2><%= @chatroom.recipient.gardens[0].name.capitalize %> de <%= @chatroom.recipient.nickname.capitalize %>. </h2>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-8" data-chatroom-subscription-target="messages">
+      <ul class="chatlist">
+        <% @chatroom.messages.each do |message| %>
+          <%= render "messages/message", message: message %>
+        <% end %>
+      </ul>
     </div>
     <div class="message_content col-12 col-lg-6 d-flex justify-content-center">
       <%= simple_form_for [@chatroom, @message],
@@ -32,3 +39,10 @@
   <%= link_to "Return", :back, class: "link_return"%>
   <%= link_to "Les Jardins", gardens_path, class: "link_return" %>
 </div>
+<% else %>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      Kein Chat gefunden
+    </div>
+  </div>
+<% end %>

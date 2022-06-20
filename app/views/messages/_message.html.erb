@@ -1,32 +1,19 @@
-<div class="container message">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-body">
-          <ul class="chat-list">
-          <% if current_user.id === message.user_id %>
-            <li class="message sender_message">
-          <% else %>
-            <li class="message recipient_message">
-          <% end %>
-              <div class="chat-body">
-                <div class="chat-message">
-                  <div class="message-text" id="message-<%= message.id %>" data-message="<%= message.id %>">
-                    <p><small><strong><%= message.user.nickname.capitalize %></strong>
-                      <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-                    </small></p>
-                    <p><%= message.content %></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
+<li  data-message="<%= message.id %>">
+  <div class="message_container">
+    <div class="message<% if current_user.id === message.user_id %> own_message<% end %>"  id="message-<%= message.id %>">
+      <div class="message_sender">
+        <%= message.user.nickname.capitalize %>
+      </div>
+      <div class="message_info">
+        <%= message.created_at.strftime("%a %b %e at %l:%M %p") %>
+      </div>
+      <div class="message_body">
+        <%= message.content %>
       </div>
     </div>
-    <%# <div class="notification-actions col-12 col-lg-6">
-      <a href="#">Modifier <i class="fas fa-pencil-alt"></i></a>
-      <a href="#">Suprimer <i class="far fa-trash-alt"></i></a>
-    </div> %>
   </div>
-</div>
+</li>
+  <%# <div class="notification-actions col-12 col-lg-6">
+    <a href="#">Modifier <i class="fas fa-pencil-alt"></i></a>
+    <a href="#">Suprimer <i class="far fa-trash-alt"></i></a>
+  </div> %>
