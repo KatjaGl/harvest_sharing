@@ -1,6 +1,6 @@
 class ChatroomsController < ApplicationController
   before_action :set_chatroom, only: [:show]
-  skip_before_action :authenticate_user!, only: %i[create show index]
+
 
   def index
     @chatroom = Chatroom.all
