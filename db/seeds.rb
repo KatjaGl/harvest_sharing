@@ -19,32 +19,32 @@ p "Chat destroy"
 User.destroy_all
 p "user destroy"
 
-user1 = User.create!(nickname: "test", last_name: "sharing", first_name: "harvest", address: "23 bd dubouchage 06000 Nice", email: "jjj@live.fr", password: "azerty")
+user1 = User.create!(nickname: "test", last_name: "sharing", first_name: "harvest", address: "23 bd dubouchage, 06000 Nice", email: "jjj@live.fr", password: "azerty")
 p "user create"
-user2 = User.create!(nickname: "Mariadu06", last_name: "Cama", first_name: "Maria", address: "2 avenue Malaussena 06000 Nice", email: "mariac@gmail.com", password: "azerty")
-user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Manue", address: "15 rue saint-philippe 06000 Nice", email: "3jj@live.fr", password: "azerty")
+user2 = User.create!(nickname: "Mariadu06", last_name: "Cama", first_name: "Maria", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
+user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Manue", address: "15 rue saint-philippe, 06000 Nice", email: "3jj@live.fr", password: "azerty")
 p "user create"
-user4 = User.create!(nickname: "Jas", last_name: "Derrag", first_name: "Jasmine", address: "10 rue Massenet 06000 Nice", email: "jas@gmail.com", password: "azerty")
-user5 = User.create!(nickname: "Kat", last_name: "Demas", first_name: "Katia", address: "4 place Pellegrini 06300 Nice", email: "jkj@live.fr", password: "azerty")
+user4 = User.create!(nickname: "Jas", last_name: "Derrag", first_name: "Jasmine", address: "10 rue Massenet, 06000 Nice", email: "jas@gmail.com", password: "azerty")
+user5 = User.create!(nickname: "Kat", last_name: "Demas", first_name: "Katia", address: "4 place Pellegrini, 06300 Nice", email: "jkj@live.fr", password: "azerty")
 p "user create"
-user6 = User.create!(nickname: "Soso", last_name: "Monville", first_name: "Anne-Sophie", address: "13 rue de liège 75009 Paris", email: "soso@gmail.com", password: "azerty")
+user6 = User.create!(nickname: "Soso", last_name: "Monville", first_name: "Anne-Sophie", address: "13 rue de liège, 75009 Paris", email: "soso@gmail.com", password: "azerty")
 user7 = User.create!(nickname: "Lauradu06", last_name: "Dupont", first_name: "Laura", address: "50 Rue Condorcet, 75009 Paris", email: "jjmj@live.fr", password: "azerty")
 p "user create"
 user8 = User.create!(nickname: "chouchou", last_name: "Hoffert", first_name: "Arsène", address: "11 Rue Vauquelin, 75005 Paris", email: "dodo@gmail.com", password: "azerty")
 user9 = User.create!(nickname: "Hub", last_name: "Lafont", first_name: "Hubert", address: "31 Rue d'Ulm, 75005 Paris", email: "do@gmail.com", password: "azerty")
 user10 = User.create!(nickname: "Marco", last_name: "Maronnier", first_name: "Marc", address: "4 Rue Vavin, 75006 Paris", email: "zodo@gmail.com", password: "azerty")
 
-garden1 = Garden.create!(name: " Le Jardins des Belles Fleurs", address: "23 bd dubouchage 06000 Nice", user_id: user1.id)
+garden1 = Garden.create!(name: " Le Jardins des Belles Fleurs", address: "23 bd dubouchage, 06000 Nice", user_id: user1.id)
 p "garden create"
-garden2 = Garden.create!(name: "Le jardin des Amoureux", address: "2 avenue Malaussena 06000 Nice", user_id: user2.id)
+garden2 = Garden.create!(name: "Le jardin des Amoureux", address: "2 avenue Malaussena, 06000 Nice", user_id: user2.id)
 p "garden create"
-garden3 = Garden.create!(name: "Le jardin Des Lilas", address: "15 rue saint-philippe 06000 Nice", user_id: user3.id)
+garden3 = Garden.create!(name: "Le jardin Des Lilas", address: "15 rue saint-philippe, 06000 Nice", user_id: user3.id)
 p "garden create"
-garden4 = Garden.create!(name: "Le Jardin Fleur de Jade", address: "10 rue Massenet 06000 Nice", user_id: user4.id)
+garden4 = Garden.create!(name: "Le Jardin Fleur de Jade", address: "10 rue Massenet, 06000 Nice", user_id: user4.id)
 p "garden create"
-garden5 = Garden.create!(name: "Le Jardin aux Papillons", address: "4 place Pellegrini 06300 Nice", user_id: user5.id)
+garden5 = Garden.create!(name: "Le Jardin aux Papillons", address: "4 place Pellegrini, 06300 Nice", user_id: user5.id)
 p "garden create"
-garden6 = Garden.create!(name: "Le Jardin des Poètes", address: "13 rue de liège 75009 Paris", user_id: user6.id)
+garden6 = Garden.create!(name: "Le Jardin des Poètes", address: "13 rue de liège, 75009 Paris", user_id: user6.id)
 p "garden create"
 garden7 = Garden.create!(name: "Le Jardin des copains", address: "50 Rue Condorcet, 75009 Paris", user_id: user7.id)
 p "garden create"
@@ -55,9 +55,9 @@ p "garden create"
 garden10 = Garden.create!(name: "Le Jardin Anglais", address: "4 Rue Vavin, 75006 Paris", user_id: user10.id)
 p "garden create"
 
-
 product1 = Product.create!(name: "tomate", category: "vegetable")
-product1.photo.attach(io: File.open('app/assets/images/seed/tomate-potager.png'), filename:"tomate-potager.png", content_type:"image/png")
+product1.photos.attach(io: File.open('app/assets/images/seed/tomate jardin.jpg'), filename: "tomate jardin.jpg", content_type: "image/jpg")
+product1.photos.attach(io: File.open('app/assets/images/seed/tomates.jpg'), filename: "tomates.jpg", content_type: "image/jpg")
 product2 = Product.create!(name: "citron", category: "fruit")
 product3 = Product.create!(name: "courgette", category: "vegetable")
 product4 = Product.create!(name: "orange", category: "fruit")
@@ -82,9 +82,9 @@ product20 = Product.create!(name: "olive", category: "autre")
 gardenProduct1 = GardenProduct.create!(product_id: product1.id, garden_id: garden1.id, quantity: "30")
 gardenProduct2 = GardenProduct.create!(product_id: product2.id, garden_id: garden2.id, quantity: "50")
 
-gardenProductCharacteristic1 = GardenProductCharacteristic.create!(garden_product_id: gardenProduct1.id, characteristic_id: characteristic1.id )
+# gardenProductCharacteristic1 = GardenProductCharacteristic.create!(garden_product_id: gardenProduct1.id, characteristic_id: characteristic1.id )
 
-review1 = Review.create!(rating: "2", comment: "bon", user_id: user1.id, garden_id: garden1.id)
-p "review create"
-favorite1 = Favorite.create!(garden_id: garden1.id, user_id: user1.id)
-characteristic1 = Characteristic.create!(name: "bio")
+# review1 = Review.create!(rating: "2", comment: "bon", user_id: user1.id, garden_id: garden1.id)
+# p "review create"
+# favorite1 = Favorite.create!(garden_id: garden1.id, user_id: user1.id)
+# # characteristic1 = Characteristic.create!(name: "bio")
