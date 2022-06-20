@@ -18,6 +18,7 @@ class Garden < ApplicationRecord
   # delegate :name, :to => :product, :prefix => true
 
   # pg_search_scope :product_search, associated_against: { product: [:name] }
+
   # A UTILISER SI ON  A UN ONE TO MANY (2 tabs reliées directement entre elles )
 
 end
