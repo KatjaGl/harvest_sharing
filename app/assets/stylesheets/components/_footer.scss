@@ -24,12 +24,16 @@ a{
   color: white
 }
 
-a:hover {
+/* a:hover {
   color: orange;
+} */
+
+.fooButtons {
+  font-size: 40px;
 }
 
-.fooButtons{
-  font-size: 40px;
+.fooButtons a {
+ text-decoration: none;
 }
 
 .titre-news {

@@ -1,43 +1,19 @@
 
 <div class="container" >
   <h1> LA NATURE NOUS RASSEMBLE </h1>
+
   <div class="search-home">
-    <div class="ville">
-      <p>Choisir une ville</p>
-      <%= form_tag gardens_path, method: :get, id:'search-form' do %>
-        <%= text_field_tag :query_product,
-        params[:query_product],
-        class: "form-control d-flex align-items- justify-content-center localisation",
-        placeholder: "ex : Marseille"%>
-    </div>
-    <div class="produit">
-      <p>Choisir un produit</p>
-      <%= text_field_tag :query_product,
-      params[:query_product],
-      class: "form-control d-flex align-items-center justify-content-center localisation",
-      placeholder: "ex : Courgette" %>
-    </div>
-    <%= submit_tag "TROUVEZ!", class: "btn btn-success" %>
-    <% end %>
+    <%= render 'shared/search' %>
   </div>
   <br>
   <br>
   <h2> Les derniers ajouts </h2>
-  <div class="box">
-    <% @gardens.each do |garden| %>
-      <div class= "garden-card">
-        <h5><strong> <%=garden.name%></strong> </h5>
-        <div class="details_img">
-          <%= image_tag "jardin1.jpg", class:"garden-img", size: "100x100"  %>
-          <div class="garden_card_details">
-            <p><%=garden.address%></p>
-            <%# <p>Légumes/fruits <%# #icon %>
-          </div>
-        </div>
-        <%= link_to "voir", garden_path(garden), class:"card-button-voir" %>
-      </div>
-    <% end %>
-  </div>
+    <div class="box-gardens">
+      <% @gardens.each do |garden| %>
+      <%= render "./gardens/card", garden:garden %>
+      <% end %>
+    </div>
+
   <br>
   <br>
   <h1>LES AVANTAGES DE HARVEST SHARING</h1>
@@ -53,9 +29,10 @@
     <div class="col-sm-6 text-start">
       <div class="vous"> <img src="https://res.cloudinary.com/drizziyom/image/upload/v1655462386/harvest%20sharing%20logo/PhotoPanier_rt8iaq.png" style="width: 400px;">
       </div>
-      <h2> Et pour vous aussi : </h2>
-      <p> Pour faire de belles rencontres avec des personnes sensibles aux mêmes valeurs que vous.</p>
-      <p> Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.</p>
+
+        <h2> Et pour vous aussi : </h2>
+          <p> Pour faire de belles rencontres avec des personnes sensibles aux mêmes valeurs que vous.</p>
+            <p> Pour vous permettre de couvrir le coût de vos graines/semences de bonne qualité.</p>
+
     </div>
-  </div>
 </div>
