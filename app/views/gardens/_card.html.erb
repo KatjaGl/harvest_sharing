@@ -2,7 +2,7 @@
   <%= link_to garden_path(garden) do %>
 <div class = "garden-card">
     <i class="fas fa-heart"></i>
-<%= cl_image_tag garden.photo.key, height: 300, width: 400, crop: :fill, class: "garden-img" %>
+<%# <%= cl_image_tag garden.photo.key, height: 300, width: 400, crop: :fill, class: "garden-img" %>
   <div class="card-garden-infos">
     <h5 id="card-text" ><strong> <%=garden.name%></strong></h5>
       <p><%=garden.address%></p>
