@@ -3,10 +3,21 @@ class GardensController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[show index]
 
   def index
-    if params[:query_product].present?
+
+    if params[:query_product].present? && params[:query_city].blank?
       product = Product.find_by_name(params[:query_product])
       if product
         @gardens = product.gardens
+      else
+        @gardens = []
+      end
+    elsif params[:query_product].blank? && params[:query_city].present?
+      @gardens = Garden.where("address ILIKE ?", "%#{params[:query_city]}%")
+    elsif params[:query_product].present? && params[:query_city].present?
+      product = Product.find_by_name(params[:query_product])
+      if product
+        gardens = product.gardens
+        @gardens = gardens.where("address ILIKE ?", "%#{params[:query_city]}%")
       else
         @gardens = []
       end
