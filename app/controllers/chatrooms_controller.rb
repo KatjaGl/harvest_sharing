@@ -22,21 +22,38 @@ class ChatroomsController < ApplicationController
 
   private
 
-  # def chat_params
-  #   params.require(:chat).permit(:sender_id, :recipient_id)
-  # end
-
   def chatroom_exist?(chatrooms, recipient_id, sender_id)
-    if !chatrooms.where(sender_id: sender_id).find_by_recipient_id(recipient_id).nil?
-      return chatrooms.where(sender_id: sender_id).find_by_recipient_id(recipient_id)
-    elsif !chatrooms.where(sender_id: recipient_id).find_by_recipient_id(sender_id).nil?
-      return chatrooms.where(sender_id: recipient_id).find_by_recipient_id(sender_id)
+    chatrooms2 = chatrooms.where(sender_id: sender_id,
+      recipient_id: recipient_id).or(chatrooms.where(sender_id:
+        recipient_id, recipient_id: sender_id))
+    if chatrooms2
+      return chatrooms2[0]
     else
       return false
     end
   end
 
   def set_chatroom
-    @chatroom = Chatroom.find(params[:id])
+    #@chatroom = Chatroom.find(params[:id])
+    chatroom = Chatroom.where(id: params[:id])
+    @chatroom = chatroom.size > 0 ? chatroom[0] : false
   end
+
+  # def chat_params
+  #   params.require(:chat).permit(:sender_id, :recipient_id)
+  # end
+
+  # def chatroom_exist?(chatrooms, recipient_id, sender_id)
+  #   if !chatrooms.where(sender_id: sender_id).find_by_recipient_id(recipient_id).nil?
+  #     return chatrooms.where(sender_id: sender_id).find_by_recipient_id(recipient_id)
+  #   elsif !chatrooms.where(sender_id: recipient_id).find_by_recipient_id(sender_id).nil?
+  #     return chatrooms.where(sender_id: recipient_id).find_by_recipient_id(sender_id)
+  #   else
+  #     return false
+  #   end
+  # end
+
+  # def set_chatroom
+  #   @chatroom = Chatroom.find(params[:id])
+  # end
 end

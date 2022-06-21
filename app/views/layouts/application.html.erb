@@ -10,19 +10,12 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
   <body>
+
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%# <%= render 'shared/garden_card' %>
     <%= yield %>
-    <div>
-      <%# <h1>Scroll To Top Button</h1> %>
-      <button id="btnScrollToTop">
-        <%# <a src="app/assets/images/logo_btn.jpg" class="image-tree"></a> %>
-        <%# <%= image_tag ("logo_btn"), class: "image-tree" %>
-        <%# button_tag(product.image_url) %>
-        <%# <i src="app/assets/images/logo_btn.jpg" class="image-tree">arrow_upward</i> %>
-      </button>
-    </div>
+    <button id="btnScrollToTop"></button>
     <%= render 'shared/footer' %>
   </body>
 </html>

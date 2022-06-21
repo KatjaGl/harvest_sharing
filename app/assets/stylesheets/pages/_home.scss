@@ -43,7 +43,9 @@ p {
 
 
 #search-form {
-  width: 500px;
+  width: 2000px;
+  justify-content: center;
+  margin-left: 200px;
 }
 
 .produit {
@@ -60,6 +62,7 @@ p {
   width: 150px;
   justify-content: center;
   margin-left: 30px;
+  margin-top: 47px;
 }
 
 .btn:hover {
@@ -106,7 +109,7 @@ p {
 //   width: 50%;
 // }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  text-align: center;
-}
+// *, *::before, *::after {
+//   box-sizing: border-box;
+//   text-align: center;
+// }
