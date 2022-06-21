@@ -18,8 +18,7 @@ class GardensController < ApplicationController
   def show
     # @chatroom = Chatroom.new
     @garden = Garden.find(params[:id])
-    # @grd_products = @garden.products
-    # @products_grd = GardenProducts.where(garden_id: params[:id])
+
 
     # @marker =
     #   {
