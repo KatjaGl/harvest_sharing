@@ -1,23 +1,20 @@
 <div class = "container" >
-<%# <% @garden.photos.each do |photo| %> %>
   <%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill%>
-  <%# <% end %> %>
 
-  <div><h2> <%= @garden.name %> </h2>
-  </div>
-  <div class="garden-gardener">
-    <div class="garden">
-      <img class="jardin" alt="jardin d'amélie" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1655473117/Plants-de-tomates-du-potager_1_zurehg.png">
-      <div class = "card-product">
-        <h5><%= @gardenproduct.name%></h5>
-      </div>
-        <div class="card-details">
-          <% @garden.garden_products.each do |garden_product| %>
+  <div><h2> <%= @garden.name %> </h2></div>
+    <div class="garden-gardener">
+      <div class="garden">
+        <% @garden.garden_products.each do |garden_product| %>
+          <div class = "card-product">
+            <h5><%= garden_product.product.name%></h5>
+          </div>
+          <div class="card-details">
             <h5> <%= garden_product.detail_product %></h5>
             <h5> <%= garden_product.quantity %> kg.</h5>
-          <% end %>
-        </div>
+          </div>
       </div>
+        <% end %>
+
     </div>
     <div class = gardener-details>
       <h5> <%= @garden.user.nickname %> </h5>
@@ -29,9 +26,8 @@
   </div>
   <div class = reviews>
     <h5>Les Avis </h5>
-    <%# <> <%= @garden.user.nickname %>
-    <p>Robert de Nice</p>
-    <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
-    Foncez!</P>
+      <p>Robert de Nice</p>
+      <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
+        Foncez!</P>
   </div>
 </div>

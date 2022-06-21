@@ -19,11 +19,14 @@ p "Chat destroy"
 User.destroy_all
 p "user destroy"
 
-user1.presentation:"je suis passionnée par le jardinage et j'ai aménager un petit coin potager"
 
 user1 = User.create!(nickname: "test", last_name: "sharing", first_name: "harvest", address: "23 bd dubouchage, 06000 Nice", email: "jjj@live.fr", password: "azerty")
+user1.presentation = "je suis passionnée par le jardinage et j'ai aménager un petit coin potager, j'utilise de l'engrais naturel et aucun pesticide."
+user1.save
 p "user create"
 user2 = User.create!(nickname: "Maria06", last_name: "Cama", first_name: "Maria", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
+user2.presentation = "nous avons créé avec mon mari, un potager bio de tomates, nous nous sommes lancés dans la culture de variétés anciennes: Noire de Crimée, Cornue des Andes, Rose de Bern... et nous avons un magnifique cerisier!"
+user2.save
 user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Manue", address: "15 rue saint-philippe, 06000 Nice", email: "3jj@live.fr", password: "azerty")
 p "user create"
 user4 = User.create!(nickname: "Jas", last_name: "Derrag", first_name: "Jasmine", address: "10 rue Massenet, 06000 Nice", email: "jas@gmail.com", password: "azerty")
@@ -141,13 +144,13 @@ gardenProduct5 = GardenProduct.create!(product_id: product6.id, garden_id: garde
 gardenProduct6 = GardenProduct.create!(product_id: product18.id, garden_id: garden1.id, quantity: "30")
 gardenProduct6 = GardenProduct.create!(product_id: product7.id, garden_id: garden1.id, quantity: "10")
 gardenProduct7 = GardenProduct.create!(product_id: product19.id, garden_id: garden2.id, quantity: "50")
-gardenProduct7 = GardenProduct.create!(product_id: product8.id, garden_id: garden2.id, quantity: "50")
-gardenProduct8 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "50")
+gardenProduct7 = GardenProduct.create!(product_id: product8.id, garden_id: garden2.id, quantity: "52")
+gardenProduct8 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "5")
 gardenProduct8 = GardenProduct.create!(product_id: product9.id, garden_id: garden1.id, quantity: "30")
 gardenProduct9 = GardenProduct.create!(product_id: product10.id, garden_id: garden1.id, quantity: "10")
-gardenProduct9 = GardenProduct.create!(product_id: product11.id, garden_id: garden2.id, quantity: "50")
-gardenProduct10 = GardenProduct.create!(product_id: product12.id, garden_id: garden2.id, quantity: "50")
-gardenProduct10 = GardenProduct.create!(product_id: product13.id, garden_id: garden2.id, quantity: "50")
+gardenProduct9 = GardenProduct.create!(product_id: product11.id, garden_id: garden2.id, quantity: "35")
+gardenProduct10 = GardenProduct.create!(product_id: product12.id, garden_id: garden2.id, quantity: "40")
+gardenProduct10 = GardenProduct.create!(product_id: product13.id, garden_id: garden2.id, quantity: "55")
 
 
 
