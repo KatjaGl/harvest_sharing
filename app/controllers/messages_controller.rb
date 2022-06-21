@@ -13,6 +13,8 @@ class MessagesController < ApplicationController
     @message.chatroom = @chatroom
     @message.user = current_user
     if @message.save
+      #@chatroom.last_message_at = new DateTime();
+      #@chatroom.last_message_from = current_user;
       ChatroomChannel.broadcast_to(
         @chatroom,
         render_to_string(partial: "message", locals: { message: @message })
