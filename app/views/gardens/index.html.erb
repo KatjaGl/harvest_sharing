@@ -3,11 +3,9 @@
   <div class="search-gardens">
     <%= render 'shared/search' %>
   </div>
-
   <div class="box-gardens">
     <% @gardens.each do |garden| %>
-    <%= render "card", garden:garden %>
+      <%= render "card", garden:garden %>
     <% end %>
   </div>
-
 </div>
