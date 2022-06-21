@@ -20,11 +20,17 @@ class GardensController < ApplicationController
     @garden = Garden.find(params[:id])
 
 
-    # @marker =
-    #   {
-    #     lat: @garden.latitude,
-    #     lng: @garden.longitude
-    #   }
+    marker =
+      {
+        lat: @garden.latitude,
+        lng: @garden.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { garden: @garden
+          }),
+          #image_url: helpers.asset_url () #custom marker
+      }
+      @markers = []
+      @markers.push(marker)
+
   end
 
   private
