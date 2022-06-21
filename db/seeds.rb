@@ -19,9 +19,14 @@ p "Chat destroy"
 User.destroy_all
 p "user destroy"
 
+
 user1 = User.create!(nickname: "test", last_name: "sharing", first_name: "harvest", address: "23 bd dubouchage, 06000 Nice", email: "jjj@live.fr", password: "azerty")
+user1.presentation = "je suis passionnée par le jardinage et j'ai aménager un petit coin potager, j'utilise de l'engrais naturel et aucun pesticide."
+user1.save
 p "user create"
-user2 = User.create!(nickname: "Mariadu06", last_name: "Cama", first_name: "Maria", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
+user2 = User.create!(nickname: "Maria06", last_name: "Cama", first_name: "Maria", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
+user2.presentation = "nous avons créé avec mon mari, un potager bio de tomates, nous nous sommes lancés dans la culture de variétés anciennes: Noire de Crimée, Cornue des Andes, Rose de Bern... et nous avons un magnifique cerisier!"
+user2.save
 user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Manue", address: "15 rue saint-philippe, 06000 Nice", email: "3jj@live.fr", password: "azerty")
 p "user create"
 user4 = User.create!(nickname: "Jas", last_name: "Derrag", first_name: "Jasmine", address: "10 rue Massenet, 06000 Nice", email: "jas@gmail.com", password: "azerty")
@@ -34,13 +39,13 @@ user8 = User.create!(nickname: "chouchou", last_name: "Hoffert", first_name: "Ar
 user9 = User.create!(nickname: "Hub", last_name: "Lafont", first_name: "Hubert", address: "31 Rue d'Ulm, 75005 Paris", email: "do@gmail.com", password: "azerty")
 user10 = User.create!(nickname: "Marco", last_name: "Maronnier", first_name: "Marc", address: "4 Rue Vavin, 75006 Paris", email: "zodo@gmail.com", password: "azerty")
 
-garden1 = Garden.create!(name: " Le Jardins des Belles Fleurs", address: "23 bd dubouchage, 06000 Nice", user_id: user1.id)
+garden1 = Garden.create!(name: " Le Jardin des Belles Fleurs", address: "23 bd dubouchage, 06000 Nice", user_id: user1.id)
 garden1.photo.attach(io: File.open('app/assets/images/seed/jardin1.jpg'), filename: "jardin1.jpg", content_type: "image/jpg")
 p "garden create"
-garden2 = Garden.create!(name: "Le jardin des Amoureux", address: "2 avenue Malaussena, 06000 Nice", user_id: user2.id)
+garden2 = Garden.create!(name: "Le Jardin des Amoureux", address: "2 avenue Malaussena, 06000 Nice", user_id: user2.id)
 garden2.photo.attach(io: File.open('app/assets/images/seed/jardin2.jpg'), filename: "jardin2.jpg", content_type: "image/jpg")
 p "garden create"
-garden3 = Garden.create!(name: "Le jardin Des Lilas", address: "15 rue saint-philippe, 06000 Nice", user_id: user3.id)
+garden3 = Garden.create!(name: "Le Jardin Des Lilas", address: "15 rue saint-philippe, 06000 Nice", user_id: user3.id)
 garden3.photo.attach(io: File.open('app/assets/images/seed/jardin3.jpg'), filename: "jardin3.jpg", content_type: "image/jpg")
 p "garden create"
 garden4 = Garden.create!(name: "Le Jardin Fleur de Jade", address: "10 rue Massenet, 06000 Nice", user_id: user4.id)
@@ -126,10 +131,10 @@ product20 = Product.create!(name: "abricot", category: "fruit")
 product20.photos.attach(io: File.open('app/assets/images/seed/abricot.jpg'), filename: "abricot.jpg", content_type: "image/jpg")
 product20.photos.attach(io: File.open('app/assets/images/seed/abricotier.jpg'), filename: "abricotier.jpg", content_type: "image/jpg")
 
-gardenProduct1 = GardenProduct.create!(product_id: product1.id, garden_id: garden1.id, quantity: "30")
-gardenProduct1 = GardenProduct.create!(product_id: product14.id, garden_id: garden1.id, quantity: "10")
-gardenProduct2 = GardenProduct.create!(product_id: product2.id, garden_id: garden2.id, quantity: "50")
-gardenProduct2 = GardenProduct.create!(product_id: product15.id, garden_id: garden2.id, quantity: "50")
+gardenProduct1 = GardenProduct.create!(product_id: product20.id, garden_id: garden1.id, quantity: "30", detail_product: "j'ai deux abricotiers de variété Bergeron, très juteux et sucrés")
+gardenProduct1 = GardenProduct.create!(product_id: product3.id, garden_id: garden1.id, quantity: "40", detail_product: "beaucoup de courgettes nice, des jaunes et des vertes, à venir chercher pour vos ratatouilles!")
+gardenProduct2 = GardenProduct.create!(product_id: product1.id, garden_id: garden2.id, quantity: "50", detail_product: "nous avons planté différentes variétés de tomates: coeur de boeuf, ananas, green zebra...Il y en a pour tous les goûts!")
+gardenProduct2 = GardenProduct.create!(product_id: product16.id, garden_id: garden2.id, quantity: "100", detail_product: "j'ai plein de cerises bigarot sur mes deux cerisiers, venez les chercher!")
 gardenProduct3 = GardenProduct.create!(product_id: product3.id, garden_id: garden2.id, quantity: "50")
 gardenProduct3 = GardenProduct.create!(product_id: product4.id, garden_id: garden1.id, quantity: "30")
 gardenProduct4 = GardenProduct.create!(product_id: product16.id, garden_id: garden1.id, quantity: "10")
@@ -139,13 +144,13 @@ gardenProduct5 = GardenProduct.create!(product_id: product6.id, garden_id: garde
 gardenProduct6 = GardenProduct.create!(product_id: product18.id, garden_id: garden1.id, quantity: "30")
 gardenProduct6 = GardenProduct.create!(product_id: product7.id, garden_id: garden1.id, quantity: "10")
 gardenProduct7 = GardenProduct.create!(product_id: product19.id, garden_id: garden2.id, quantity: "50")
-gardenProduct7 = GardenProduct.create!(product_id: product8.id, garden_id: garden2.id, quantity: "50")
-gardenProduct8 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "50")
+gardenProduct7 = GardenProduct.create!(product_id: product8.id, garden_id: garden2.id, quantity: "52")
+gardenProduct8 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "5")
 gardenProduct8 = GardenProduct.create!(product_id: product9.id, garden_id: garden1.id, quantity: "30")
 gardenProduct9 = GardenProduct.create!(product_id: product10.id, garden_id: garden1.id, quantity: "10")
-gardenProduct9 = GardenProduct.create!(product_id: product11.id, garden_id: garden2.id, quantity: "50")
-gardenProduct10 = GardenProduct.create!(product_id: product12.id, garden_id: garden2.id, quantity: "50")
-gardenProduct10 = GardenProduct.create!(product_id: product13.id, garden_id: garden2.id, quantity: "50")
+gardenProduct9 = GardenProduct.create!(product_id: product11.id, garden_id: garden2.id, quantity: "35")
+gardenProduct10 = GardenProduct.create!(product_id: product12.id, garden_id: garden2.id, quantity: "40")
+gardenProduct10 = GardenProduct.create!(product_id: product13.id, garden_id: garden2.id, quantity: "55")
 
 
 

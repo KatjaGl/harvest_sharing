@@ -1,40 +1,34 @@
 <div class = "container" >
 
+  <%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill%>
 
-
-<%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill, class:"garden-shadow" %>
-
-  <div><h2> <%= @garden.name %> </h2>
-  </div>
-  <div class="garden-gardener">
-    <div class="garden">
-      <img class="jardin" alt="jardin d'amélie" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1655473117/Plants-de-tomates-du-potager_1_zurehg.png">
-      <div class = "card-product">
-        <h5> Tomate Grappe</h5>
-        <%# <div class= "tomate"> <%= image_tag "tomato.png", size:"100x80" %>
-        </div>
-        <div class="card-details">
-          <p> Une dizaine de plants de tomates, venez les chercher, elles sont savoureuses!</p>
-          <% @garden.garden_products.each do |garden_product| %>
+  <div><h2> <%= @garden.name %> </h2></div>
+    <div class="garden-gardener">
+      <div class="garden">
+        <% @garden.garden_products.each do |garden_product| %>
+          <div class = "card-product">
+            <h5><%= garden_product.product.name%></h5>
+          </div>
+          <div class="card-details">
+            <h5> <%= garden_product.detail_product %></h5>
             <h5> <%= garden_product.quantity %> kg.</h5>
-          <% end %>
-        </div>
+          </div>
       </div>
+        <% end %>
+
     </div>
     <div class = gardener-details>
       <h5> <%= @garden.user.nickname %> </h5>
       <img class="avatar" alt="avatar" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1655470965/Femme76_ans_a8hwta.jpg" />
       <p> <%= @garden.user.address %></p>
-      <p> Bonjour, je suis Amélie, je possède un beau potager 100% bio, je vous propose le surplus de mes récoltes!
-      N'hésitez pas à me contacter pour toutes questions, à bientôt!</p>
+
       <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
     </div>
   </div>
   <div class = reviews>
     <h5>Les Avis </h5>
-    <%# <> <%= @garden.user.nickname %>
-    <p>Roberto de Nice</p>
-    <P> Un très bel échange avec Amélie, les tomates sont pleines de saveurs, humm un vrai délice!
-    Foncez!</P>
+      <p>Robert de Nice</p>
+      <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
+        Foncez!</P>
   </div>
 </div>
