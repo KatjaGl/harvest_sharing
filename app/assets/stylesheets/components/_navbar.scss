@@ -1,24 +1,38 @@
 
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-}
+// .navbar {
+//   display: flex;
+//   justify-content: space-evenly;
+// }
 
-.navbar-logo {
+
+
+.navbar-main .navbar-brand img  {
   width: 100px;
   border-radius: 50%;
+  transform: scale(1.5);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 2px 14px 2px rgba(0, 0, 0, 0.7);
+  margin-top: 30px;
 }
-.navbar-mainbg {
+
+
+.navbar-main .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-main {
+  height: 100px;
 	background-color: #B4DB74;
-	padding: 0px;
+	justify-content: space-between;
 }
 
 #navbarSupportedContent ul li a{
 	color: white;
-    font-size: 20px;
-    display: block;
-    padding: 35px 60px;
+  font-size: 20px;
+  display: block;
+  padding: 35px 60px;
 
-	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  position: relative;
+	// transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  // position: relative;
 }
