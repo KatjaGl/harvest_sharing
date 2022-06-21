@@ -23,7 +23,7 @@ h2 {
 
 p {
   color: black;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .autres {
@@ -43,7 +43,9 @@ p {
 
 
 #search-form {
-  width: 500px;
+  width: 2000px;
+  justify-content: center;
+  margin-left: 200px;
 }
 
 .produit {
@@ -60,6 +62,7 @@ p {
   width: 150px;
   justify-content: center;
   margin-left: 30px;
+  margin-top: 47px;
 }
 
 .btn:hover {

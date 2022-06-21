@@ -7,4 +7,4 @@ class GardenProduct < ApplicationRecord
   validates :product_id, presence: true
   validates :garden_id, presence: true
   validates :quantity,  presence: true, numericality: { only_integer: true }
-end
+  end

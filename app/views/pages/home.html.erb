@@ -7,11 +7,11 @@
   <br>
   <br>
   <h2> Les derniers ajouts </h2>
-  <div class="box-gardens">
-    <% @gardens.each do |garden| %>
-      <%= render "./gardens/card", garden:garden %>
-    <% end %>
-  </div>
+    <div class="box-gardens">
+      <% @gardens.each do |garden| %>
+        <%= render "shared/card", garden:garden %>
+      <% end %>
+    </div>
   <br>
   <br>
   <h1>LES AVANTAGES DE HARVEST SHARING</h1>

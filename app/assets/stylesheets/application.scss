@@ -7,6 +7,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+// @import "mapbox-gl/dist/mapbox-gl";
 
 // Your CSS partials
 @import "components/index";
@@ -14,11 +15,6 @@
 @import "garden/index";
 @import "chatroom/index";
 
-
-// Test des composants
-.test{
-  border: 2px solid red;
-}
-.test2{
-  border:2px solid blueviolet ;
+.garden-shadow{
+  box-shadow: 2px 2px 1px yellow;
 }

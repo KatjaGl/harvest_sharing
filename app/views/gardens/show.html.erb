@@ -1,4 +1,9 @@
 <div class = "container" >
+
+
+
+<%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill, class:"garden-shadow" %>
+
   <div><h2> <%= @garden.name %> </h2>
   </div>
   <div class="garden-gardener">
@@ -6,7 +11,7 @@
       <img class="jardin" alt="jardin d'amélie" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1655473117/Plants-de-tomates-du-potager_1_zurehg.png">
       <div class = "card-product">
         <h5> Tomate Grappe</h5>
-        <div class= "tomate"> <%= image_tag "tomato.png", size:"100x80" %>
+        <%# <div class= "tomate"> <%= image_tag "tomato.png", size:"100x80" %>
         </div>
         <div class="card-details">
           <p> Une dizaine de plants de tomates, venez les chercher, elles sont savoureuses!</p>

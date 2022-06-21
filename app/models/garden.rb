@@ -6,10 +6,11 @@ class Garden < ApplicationRecord
   validates :name, presence: true
   validates :address, presence: true
   validates :user_id, presence: true
+  has_one_attached :photo
 
 
-  geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
+  # geocoded_by :address
+  # after_validation :geocode, if: :will_save_change_to_address?
 
   # include PgSearch::Model
   # multisearchable :against => [:name, product_name]
@@ -17,6 +18,7 @@ class Garden < ApplicationRecord
   # delegate :name, :to => :product, :prefix => true
 
   # pg_search_scope :product_search, associated_against: { product: [:name] }
+
   # A UTILISER SI ON  A UN ONE TO MANY (2 tabs reliées directement entre elles )
 
 end
