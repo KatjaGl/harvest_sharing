@@ -2,6 +2,9 @@
   <h2>LA NATURE NOUS RASSEMBLE</h2>
   </div>
 
+  <div class="search-home">
+    <%= render 'shared/search' %>
+  </div>
   <div class="box-gardens">
     <% @gardens.each do |garden| %>
     <%= render "shared/card", garden:garden %>
