@@ -18,6 +18,7 @@ class GardensController < ApplicationController
   def show
     # @chatroom = Chatroom.new
     @garden = Garden.find(params[:id])
+
     marker =
       {
         lat: @garden.latitude,
@@ -28,6 +29,7 @@ class GardensController < ApplicationController
       }
       @markers = []
       @markers.push(marker)
+
   end
 
   private
