@@ -18,14 +18,18 @@ class GardensController < ApplicationController
   def show
     # @chatroom = Chatroom.new
     @garden = Garden.find(params[:id])
-    # @grd_products = @garden.products
-    # @products_grd = GardenProducts.where(garden_id: params[:id])
 
-    # @marker =
-    #   {
-    #     lat: @garden.latitude,
-    #     lng: @garden.longitude
-    #   }
+    marker =
+      {
+        lat: @garden.latitude,
+        lng: @garden.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { garden: @garden
+          }),
+          #image_url: helpers.asset_url () #custom marker
+      }
+      @markers = []
+      @markers.push(marker)
+
   end
 
   private
