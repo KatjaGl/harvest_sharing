@@ -15,6 +15,7 @@ a{
 .box-gardens {
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  margin-left: 60px;
 }
 
 .garden-img{
@@ -23,12 +24,16 @@ a{
   height: 258px;
 }
 
-.fas {
+#heart {
   position: absolute;
-  top: 45px; right: 20px;
-  color: rgb(235, 239, 235);
-  width: 30px;
-  height: 30px;
+  top: 20px; right: 20px;
+  color: gainsboro;
+}
+
+#heart-favori{
+  position: absolute;
+  top: 20px; right: 20px;
+  color: rgb(236, 64, 11);
 }
 
 

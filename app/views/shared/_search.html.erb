@@ -1,20 +1,20 @@
 <%= form_tag gardens_path, method: :get, id:'search-form' do %>
   <div class="row justify-content-center">
-      <div class="col-4">
+      <div class="col-lg-4">
         <p>Choisir une ville</p>
           <%= text_field_tag :query_city,
           params[:query_city],
           class: "form-control d-flex align-items-center justify-content-center localisation",
           placeholder: "Marseille"%>
       </div>
-      <div class="col-4">
+      <div class="col-lg-4">
         <p>Choisir un produit</p>
         <%= text_field_tag :query_product,
         params[:query_product],
         class: "form-control d-flex align-items-center justify-content-center localisation",
         placeholder: "Courgette" %>
       </div>
-      <div class="col-4">
+      <div class="col-lg-4">
         <%= submit_tag "TROUVER", class: "btn btn-success" %>
       </div>
   </div>
