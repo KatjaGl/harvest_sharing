@@ -1,6 +1,7 @@
 class GardensController < ApplicationController
   before_action :set_garden, only: %i[new create]
   skip_before_action :authenticate_user!, only: %i[show index]
+  before_action :authenticate_user!, only: :toggle_favorite
 
   def index
 
@@ -51,6 +52,11 @@ class GardensController < ApplicationController
       @markers = []
       @markers.push(marker)
 
+  end
+
+  def toggle_favorite
+    @garden = Garden.find_by(id: params[:id])
+    current_user.favorited?(@garden) ? current_user.unfavorite(@garden) : current_user.favorite(@garden)
   end
 
   private

@@ -1,0 +1,9 @@
+<div class = "card-product">
+  <h5><%= garden_product.product.name%></h5>
+  <% garden_product.product.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+</div>
+<div class="card-details">
+  <h5> <%= garden_product.detail_product %></h5>
+</div>
