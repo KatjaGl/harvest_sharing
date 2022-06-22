@@ -4,20 +4,20 @@ class GardensController < ApplicationController
 
   def index
 
-    if params[:query_product].present? && params[:query_city].blank?
+    if params[:query_product].present? && params[:query_address].blank?
       product = Product.find_by_name(params[:query_product])
       if product
         @gardens = product.gardens
       else
         @gardens = []
       end
-    elsif params[:query_product].blank? && params[:query_city].present?
-      @gardens = Garden.where("address ILIKE ?", "%#{params[:query_city]}%")
-    elsif params[:query_product].present? && params[:query_city].present?
+    elsif params[:query_product].blank? && params[:query_address].present?
+      @gardens = Garden.where("address ILIKE ?", "%#{params[:query_address]}%")
+    elsif params[:query_product].present? && params[:query_address].present?
       product = Product.find_by_name(params[:query_product])
       if product
         gardens = product.gardens
-        @gardens = gardens.where("address ILIKE ?", "%#{params[:query_city]}%")
+        @gardens = gardens.where("address ILIKE ?", "%#{params[:query_address]}%")
       else
         @gardens = []
       end
@@ -38,6 +38,7 @@ class GardensController < ApplicationController
         @caroussel_class << ""
       end
     end
+
 
     marker =
       {
