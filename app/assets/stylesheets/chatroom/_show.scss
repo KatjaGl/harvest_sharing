@@ -1,6 +1,12 @@
-$primary: #6fcdaf;
+$primary: #1f681f;
 $white: #F9FBFF;
 $dark: #777777;
+
+
+
+.container-chatroom {
+  margin-top: 5%;
+}
 
 .chatlist li {
   margin-bottom: 10px;
@@ -34,49 +40,10 @@ $dark: #777777;
   border-bottom-right-radius: 5px;
 }
 
-
-
-// .own_message {
-//   float: right;
-//   margin-right: 20px;
-//   text-align: right;
-//   background-color: rgb(27, 110, 77) !important;
-// }
-
-// .container_message .notification-actions {
-//   opacity: 10%;
-//   display: flex;
-//   transition: ease .3s;
-// }
-
-// .container_message:hover .notification-actions {
-//   opacity: 1;
-// }
-
-// .container_message .notification-actions a {
-//   color: $white;
-//   margin-left: 16px;
-//   font-size: 14px;
-// }
-
-// .container_message .notification-actions a:hover {
-//   color: #555555;
-// }
-
-// .flash {
-//   padding: 5px 5px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   background: transparent;
-//   box-shadow: 0 0 8px rgba(0,0,0,0.2);
-//   border-radius: 4px;
-//   margin: 15px;
-// }
-
-// .flash-success {
-//   border: 2px solid #1EDD88;
-// }
+.btn .btn-success:hover {
+  background-color: #1f681f;
+  color: orange;
+}
 
 .link_return {
   display: flex;

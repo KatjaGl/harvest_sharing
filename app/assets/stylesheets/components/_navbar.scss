@@ -6,7 +6,7 @@
 
 
 
-.navbar-main .navbar-brand img  {
+.navbar-brand img  {
   width: 100px;
   border-radius: 50%;
   transform: scale(1.5);
@@ -22,6 +22,7 @@
 }
 
 .navbar-main {
+  display: flex;
   height: 100px;
 	background-color: #B4DB74;
 	justify-content: space-between;

@@ -7,7 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import { btnScrollToTop } from "plugins/buttonscrol";
+import { btnScrollToTop } from "plugins/buttonscroll";
 
 
 Rails.start()
@@ -21,4 +21,6 @@ import "bootstrap"
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   btnScrollToTop();
+
+
 });
