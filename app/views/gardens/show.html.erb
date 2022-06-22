@@ -1,33 +1,42 @@
 <div class = "container" >
 <div class="row">
 
-  <div class="name"><h2> garden.name </h2></div>
-    <div class= "images-show">
-      <img class="jardin" alt="jardin d'amélie" src="https://res.cloudinary.com/drizziyom/image/upload/v1655803184/seed/AdobeStock_163682260_Preview_lstafv.jpg">
+  <%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill%>
 
-  <div class="gardener">
-        <img class="avatar" alt="avatar" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1655803184/seed/AdobeStock_163682260_Preview_lstafv.jpg"/>
-<br>
+  <div><h2> <%= @garden.name %> </h2></div>
+    <div class="garden-gardener">
+      <div class="garden">
+        <% @garden.garden_products.each do |garden_product| %>
+          <div class = "card-product">
+            <h5><%= garden_product.product.name%></h5>
+          </div>
+          <div class="card-details">
+            <h5> <%= garden_product.detail_product %></h5>
+            <h5> <%= garden_product.quantity %> kg.</h5>
+          </div>
+      </div>
+        <% end %>
 
-    <div class="gardener-details">
-        <h5> Je m'appelle Amelie,<br>
-        depuis toute jeune <br>
-        passioné par la nature et le jardinage ,<br>
-        je vous propose de recupérer le surplus de ma production de mes cerisiers,
-        je serai ravie de vous accueillir et partager avec vous un moment convivial.</h5>
     </div>
+    <div class = gardener-details>
+      <h5> <%= @garden.user.nickname %> </h5>
+      <img class="avatar" alt="avatar" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1655470965/Femme76_ans_a8hwta.jpg" />
+      <p> <%= @garden.user.address %></p>
+
+      <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
+    </div>
+
+    <div id= "mapbox-div"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
   </div>
-    </div>
+  <div class = reviews>
+    <h5>Les Avis </h5>
+      <p>Robert de Nice</p>
+      <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
+        Foncez!</P>
 
-      <div class="card-product">
-      <div class=" product-details">
-      <p>j'ai un arbre donnant beaucoup de cerises bigarreau et des ....., vous pouvez venir cueillir vos fruits dans mon jardin</p>
-        <p> quantité disponible : 5kg </p>
-      </div>
-        <div>
-        <img class="product1" alt="cerisier" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1655721002/seed/cerisier_cnpfml.jpg">
-        <img class="product2" alt="cerise" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1655721000/seed/cerise_r570k6.jpg">
-        </div>
-      </div>
   </div>
 </div>
