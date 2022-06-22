@@ -30,6 +30,7 @@ class GardensController < ApplicationController
     # @chatroom = Chatroom.new
     @garden = Garden.find(params[:id])
 
+
     marker =
       {
         lat: @garden.latitude,
