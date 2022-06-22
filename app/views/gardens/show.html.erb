@@ -1,35 +1,46 @@
 <div class = "container" >
   <div class="row">
-    <%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill%>
-    <h2> <%= @garden.name %> </h2>
-
-    <div class="garden-gardener">
-      <div class="garden">
-        <% @garden.garden_products.each do |garden_product| %>
-          <%= render "card_product", garden_product:garden_product %>
-        <% end %>
+  <h2> <%= @garden.name%> </h2>
+    <div class = "gardener-grid">
+      <div class ="jardin-gardner" >
+        <div >
+          <%= cl_image_tag @garden.photo.key, crop: :fill, class:"jardin" %>
+        </div>
       </div>
+
+        <div class = gardener-details>
+          <h5> <%= @garden.user.nickname %> </h5>
+          <% if @garden.user.avatar.attached? %>
+            <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>200, :opacity=>100, :radius=>"max", :width=>200, :crop=>"fill"%>
+          <% end %>
+          <p> <%= @garden.user.address %></p>
+          <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
+        </div>
+
+      <%# <div class="justify-content-space-between card-product"> %>
+        <div class=" product-details">
+          <% @garden_products.each do |garden_product| %>
+            <p>Description de <%= garden_product.product.name %>:</p>
+            <p><%= garden_product.detail_product%></p> <br>
+            <p>Quantité: <%= garden_product.quantity%> Kg </p>
+          <% end %>
+        </div>
+
+        <div class="caroussel-garden gardener">  <%= render "shared/caroussel", images_produits: @images_produits, caroussel_class: @caroussel_class %>
+        </div>
+      <%# </div> %>
     </div>
 
-    <div class = gardener-details>
-      <h5> <%= @garden.user.nickname %> </h5>
-      <% if @garden.user.avatar.attached? %>
-        <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>200, :opacity=>100, :radius=>"max", :width=>200, :crop=>"fill"%>
-      <% end %>
-      <p> <%= @garden.user.address %></p>
-      <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
+    <div class = reviews>
+      <h5><strong>LES AVIS</strong></h5>
+      <%#<p>Robert de Nice</p>
+      <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
+      Foncez!</P> %>
     </div>
-
+  </div>
+</div>
     <div id= "mapbox-div"
       data-controller="mapbox"
       data-mapbox-markers-value="<%= @markers.to_json %>"
       data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-  </div>
-  <div class = reviews>
-    <h5>Les Avis </h5>
-      <%# <p>Robert de Nice</p>
-      <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
-        Foncez!</P> %>
-  </div>
-</div>
