@@ -1,4 +1,5 @@
 class Garden < ApplicationRecord
+  acts_as_favoritable
   has_many :reviews
   belongs_to :user
   has_many :garden_products

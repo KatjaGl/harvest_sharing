@@ -1,0 +1,6 @@
+<% unless current_user.nil? %>
+<div class="like-icon mx-2 <%= 'red' if current_user.favorited?(garden) %>" data-id="<%= garden.id %>">
+  <%= link_to "", toggle_favorite_garden_path(garden), remote: true, method: :post, class: "fas fa-heart" %>
+
+</div>
+<% end %>

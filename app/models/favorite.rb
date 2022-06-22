@@ -1,6 +1,12 @@
+# frozen_string_literal: true
+
 class Favorite < ApplicationRecord
-  belongs_to :garden
-  belongs_to :user
-  validates :garden_id, presence: true
-  validates :user_id, presence: true
+  extend ActsAsFavoritor::FavoriteScopes
+
+  belongs_to :favoritable, polymorphic: true
+  belongs_to :favoritor, polymorphic: true
+
+  def block!
+    update!(blocked: true)
+  end
 end

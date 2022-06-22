@@ -158,5 +158,4 @@ gardenProduct10 = GardenProduct.create!(product_id: product13.id, garden_id: gar
 
 # review1 = Review.create!(rating: "2", comment: "bon", user_id: user1.id, garden_id: garden1.id)
 # p "review create"
-# favorite1 = Favorite.create!(garden_id: garden1.id, user_id: user1.id)
 # # characteristic1 = Characteristic.create!(name: "bio")
