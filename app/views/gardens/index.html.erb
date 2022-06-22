@@ -1,13 +1,23 @@
+<div class="container" >
 
-<div class="container">
-  <h2>LA NATURE NOUS RASSEMBLE</h2>
+  <div class="row">
+    <div class="col-12">
+    <h1>LA NATURE NOUS RASSEMBLE</h1>
+    </div>
   </div>
-  <div class="search-home">
-    <%= render 'shared/search' %>
+  <div class="row">
+    <div class="search-home">
+      <%= render 'shared/search' %>
+    </div>
   </div>
-  <div class="box-gardens">
+  <div class="row">
+    <div class="col-12">
+      <h2>MES FAVORIS</h2>
+    </div>
+  </div>
+  <div class="row align-items-space-around">
     <% @gardens.each do |garden| %>
       <%= render "shared/card", garden:garden %>
     <% end %>
   </div>
-
+</div>
