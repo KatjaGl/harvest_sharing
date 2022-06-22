@@ -53,7 +53,7 @@ p {
 //   width: 500px;
 // }
 
-.btn {
+.btn-success {
   background-color: #1f681f;
   color: white;
   padding: 8px 24px;
@@ -61,19 +61,18 @@ p {
   font-weight: lighter;
   opacity: 0.6;
   width: 150px;
-  justify-content: center;
-  margin-left: 50px;
-  margin-top: 47px;
+  border-color: #1f681f;
+  // justify-content: end;
+  // margin-left: 50px;
+  // margin-top: 47px;
 }
 
-.btn:hover {
+.btn-success:hover {
   background-color: #1f681f;
   color: orange;
 }
 
-.btn-success {
-  border-color: #1f681f;
-}
+
 
 
 // .box {

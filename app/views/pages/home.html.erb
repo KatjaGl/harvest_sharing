@@ -17,15 +17,13 @@
   <br>
   <div class="row">
     <div class="col-12">
-      <h2> Les derniers ajouts </h2>
+      <h2> Mes Favoris </h2>
     </div>
   </div>
   <div class="row align-items-space-around">
-    <div class="box-gardens">
-      <% @gardens.each do |garden| %>
-        <%= render "shared/card", garden:garden %>
-      <% end %>
-    </div>
+    <% @gardens.each do |garden| %>
+      <%= render "shared/card", garden:garden %>
+    <% end %>
   </div>
   <br>
   <br>
