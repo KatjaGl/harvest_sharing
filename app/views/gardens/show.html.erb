@@ -18,13 +18,11 @@
 
       <%# <div class="justify-content-space-between card-product"> %>
         <div class=" product-details">
-        <% @garden_products.each do |garden_product| %>
-          <p>Description de <%= garden_product.product.name %>:</p>
-          <%= garden_product.detail_product%>
-        <% end %>%>
-        <%# detail de produit.1 + produit.2 +...... %>
-          <p>j'ai un arbre donnant beaucoup de cerises bigarreau et des ....., vous pouvez venir cueillir vos fruits dans mon jardin</p>
-          <p> quantité disponible : 5kg </p>
+          <% @garden_products.each do |garden_product| %>
+            <p>Description de <%= garden_product.product.name %>:</p>
+            <p><%= garden_product.detail_product%></p> <br>
+            <p>Quantité: <%= garden_product.quantity%> Kg </p>
+          <% end %>
         </div>
 
         <div class="caroussel-garden gardener">  <%= render "shared/caroussel", images_produits: @images_produits, caroussel_class: @caroussel_class %>
