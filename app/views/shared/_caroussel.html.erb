@@ -1,10 +1,10 @@
-<div class = "mon-caroussel-a-moi">
+<div class="mon-caroussel-a-moi gardener-details">
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
     <% n=0 %>
       <% @images_products.each do |photo| %>
       <div class="carousel-item <%= caroussel_class[n] %>">
-        <%= cl_image_tag photo, height: 400, width: 400, crop: :fill %>
+        <%= cl_image_tag photo, :height=>300, :width=>500, :radius => 15,crop: "scale" %>
       </div>
       <% n+=1%>
       <% end %>

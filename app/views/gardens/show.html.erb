@@ -1,46 +1,50 @@
 <div class = "container" >
   <div class="row">
-  <h2> <%= @garden.name%> </h2>
-    <div class = "gardener-grid">
-      <div class ="jardin-gardner" >
-        <div >
-          <%= cl_image_tag @garden.photo.key, crop: :fill, class:"jardin" %>
-        </div>
-      </div>
-
-        <div class = gardener-details>
-          <h5> <%= @garden.user.nickname %> </h5>
-          <% if @garden.user.avatar.attached? %>
-            <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>200, :opacity=>100, :radius=>"max", :width=>200, :crop=>"fill"%>
-          <% end %>
-          <p> <%= @garden.user.address %></p>
-          <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
-        </div>
-
-      <%# <div class="justify-content-space-between card-product"> %>
-        <div class=" product-details">
-          <% @garden_products.each do |garden_product| %>
-            <p>Description de <%= garden_product.product.name %>:</p>
-            <p><%= garden_product.detail_product%></p> <br>
-            <p>Quantité: <%= garden_product.quantity%> Kg </p>
-          <% end %>
-        </div>
-
-        <div class="caroussel-garden gardener">  <%= render "shared/caroussel", images_produits: @images_produits, caroussel_class: @caroussel_class %>
-        </div>
-      <%# </div> %>
-    </div>
-
-    <div class = reviews>
-      <h5><strong>LES AVIS</strong></h5>
-      <%#<p>Robert de Nice</p>
-      <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
-      Foncez!</P> %>
+    <div class="col-12 garden-name">
+      <h2> <%= @garden.name %> </h2>
     </div>
   </div>
-</div>
-    <div id= "mapbox-div"
-      data-controller="mapbox"
-      data-mapbox-markers-value="<%= @markers.to_json %>"
-      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="row">
+  <%# <div class =" gardener-grid"> %>
+    <div class =" col-7 gardner" >
+      <%= cl_image_tag @garden.photo.key, :transformation =>
+      {crop: "scale", width: 665, height: 300, radius: 15}%>
     </div>
+    <div class ="col-5 gardener-details">
+      <h5> <%= @garden.user.nickname %> </h5>
+      <% if @garden.user.avatar.attached? %>
+        <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>200, :opacity=>100, :radius=>"max", :width=>200, :crop=>"fill" %>
+      <% end %>
+      <p> <%= @garden.user.address %></p>
+      <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
+    </div>
+  </div>
+  <%# </div> %>
+  <%# <div class="justify-content-space-between card-product"> %>
+  <div class="row">
+    <div class="col-7 garden-details">
+      <% @garden_products.each do |garden_product| %>
+        <p>Description de <%= garden_product.product.name %>:</p>
+        <p><%= garden_product.detail_product%></p> <br>
+        <p>Quantité: <%= garden_product.quantity%> Kg </p>
+      <% end %>
+    </div>
+    <div class="col-5 caroussel-garden gardener"> <%= render "shared/caroussel", images_produits: @images_produits, caroussel_class: @caroussel_class %>
+    </div>
+  </div>
+  <div class="row">
+    <div class= "col-12 reviews">
+      <h5><strong>LES AVIS</strong></h5>
+      <p>Robert de Nice</p>
+      <p> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
+      Foncez!</p>
+    </div>
+  </div>
+  <div class="row">
+      <div class= "col-12 mapboxx">
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      </div>
+  </div>
+</div>
