@@ -1,57 +1,49 @@
 <div class = "container" >
-<div class="row">
-  <div><h2> <%= @garden.name %> </h2>
-    <%= cl_image_tag @garden.photo.key, crop: :fill, class:"jardin" %></div>
+  <div class="row">
+  <h2> <%= @garden.name%> </h2>
+    <div class = "gardener-grid">
+      <div class ="jardin-gardner" >
+        <div >
+          <%= cl_image_tag @garden.photo.key, crop: :fill, class:"jardin" %>
+        </div>
+      </div>
 
+        <div class = "gardener">
+          <h5> <%= @garden.user.nickname %> </h5>
+          <img class="avatar" alt="avatar" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1655470965/Femme76_ans_a8hwta.jpg" />
+          <p> <%= @garden.user.address %></p>
 
-    <%= render "shared/caroussel" %>
+          <%= link_to "Send a message", chatrooms_path(user: @garden.user), class: "chat", method: :post%>
+        </div>
 
-    <div class="card-product">
-        <% @garden.garden_products.each do |garden_product| %>
-          <div class = "garden-name">
-            <h5><%= garden_product.product.name%></h5>
-          <div class="product-details">
-            <h5> <%= garden_product.detail_product%></h5>
-          </div>
+      <%# <div class="justify-content-space-between card-product"> %>
+        <div class=" product-details">
+        <% @garden_products.each do |garden_product| %>
+          <p>Description de <%= garden_product.product.name %>:</p>
+          <%= garden_product.detail_product%>
+        <% end %>%>
+        <%# detail de produit.1 + produit.2 +...... %>
+          <p>j'ai un arbre donnant beaucoup de cerises bigarreau et des ....., vous pouvez venir cueillir vos fruits dans mon jardin</p>
+          <p> quantité disponible : 5kg </p>
+        </div>
 
-        <% end %>
-
+        <div class="caroussel-garden gardener">  <%= render "shared/caroussel", images_produits: @images_produits, caroussel_class: @caroussel_class %>
+        </div>
+      <%# </div> %>
     </div>
-    <div class = gardener>
-      <h5> <%= @garden.user.nickname %> </h5>
-      <img class="avatar" alt="avatar" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1655470965/Femme76_ans_a8hwta.jpg" />
-      <p> <%= @garden.user.address %></p>
 
-      <%= link_to "Send a message", chatrooms_path(user: @garden.user), class: "chat", method: :post%>
-    </div>
-
-
-    <div id= "mapbox-div"
-      data-controller="mapbox"
-      data-mapbox-markers-value="<%= @markers.to_json %>"
-      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-  </div>
-  <div class = reviews>
-    <h5>Les Avis </h5>
+    <div class = reviews>
+      <h5><strong>LES AVIS</strong></h5>
       <p>Robert de Nice</p>
       <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
-        Foncez!</P>
+      Foncez!</P>
+    </div>
+
 
   </div>
 </div>
-
-
-
-
-
-    <div class="gardener-details">
-        <h5> Je m'appelle Amelie,<br>
-        depuis toute jeune <br>
-        passioné par la nature et le jardinage ,<br>
-        je vous propose de recupérer le surplus de ma production de mes cerisiers,
-        je serai ravie de vous accueillir et partager avec vous un moment convivial.</h5>
+    <div id= "mapbox-div"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-  </div>
-    </div>
-      </div>

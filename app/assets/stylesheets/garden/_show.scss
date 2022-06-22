@@ -1,4 +1,7 @@
-
+.gardener-grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
 
 .gardener-details {
     padding: 50px;
@@ -18,9 +21,11 @@
   }
 
   .reviews {
-    height:120px;
-    background-color:rgb(154, 229, 147);
-    margin-top: 20px;
+    height:100px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-top: 40px;
+    border-radius: 15px;
+    text-align: center;
   }
 
   .avatar{
@@ -55,7 +60,7 @@
   }
 
   .gardener{
-    width: 500px;
+    width: 520px;
     height: 300px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin-top: 20px;
@@ -63,8 +68,11 @@
     position: relative;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
+    object-fit: contain;
   }
   .product-details{
+    margin-top: 20px;
+    margin-left: 15px;
     width: 600px;
     height: 400px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -73,4 +81,23 @@
 
   .card-product{
     display: flex;
+    height: 300px;
+    //justify-content: space-between;
+  }
+
+
+  .jardin-gardner{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .garden-name{
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+
+  #mapbox-div{
+    margin-top: 30px;
+    width :100%;
   }

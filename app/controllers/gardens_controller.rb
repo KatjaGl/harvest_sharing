@@ -29,6 +29,15 @@ class GardensController < ApplicationController
   def show
     # @chatroom = Chatroom.new
     @garden = Garden.find(params[:id])
+    @garden_products = GardenProduct.where(garden_id: @garden)
+    @images_products = []
+    @caroussel_class = ["active"]
+    @garden_products.each do |garden_product|
+      garden_product.product.photos.each do |photo|
+        @images_products << photo.key
+        @caroussel_class << ""
+      end
+    end
 
     marker =
       {

@@ -1,21 +1,21 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1655721002/seed/cerisier_cnpfml.jpg" class="d-block w-100" >
+<div class = "mon-caroussel-a-moi">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+    <% n=0 %>
+      <% @images_products.each do |photo| %>
+      <div class="carousel-item <%= caroussel_class[n] %>">
+        <%= cl_image_tag photo, height: 300, width: 400, crop: :fill %>
+      </div>
+      <% n+=1%>
+      <% end %>
     </div>
-    <div class="carousel-item">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1655721000/seed/cerise_r570k6.jpg" class="d-block w-100" >
-    </div>
-    <div class="carousel-item">
-      <img src="https://res.cloudinary.com/drizziyom/image/upload/v1655720993/seed/abricotier_yscd7s.jpg" class="d-block w-100" >
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
