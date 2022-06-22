@@ -37,9 +37,9 @@ p {
   margin-top: 20px;
   border-radius: 20px;
   display: flex;
-  padding-left: 100px;
+  // padding-left: 100px;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 }
 
 
@@ -74,11 +74,7 @@ p {
 .btn-success {
   border-color: #1f681f;
 }
-.text-home {
-  display: flex;
-  justify-content: space-between;
 
-}
 
 // .box {
 //   display: flex;
