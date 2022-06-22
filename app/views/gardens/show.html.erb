@@ -41,10 +41,10 @@
     </div>
   </div>
   <div class="row">
-      <div class= "col-12 mapboxx">
+      <div class= "col-12 mapboxx"
         data-controller="mapbox"
         data-mapbox-markers-value="<%= @markers.to_json %>"
-        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
   </div>
 </div>
