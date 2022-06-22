@@ -1,45 +1,76 @@
 
-.card-product {
-  background-color: rgb(149, 201, 149);
-  width: 450px;
-  height: 200px;
-  margin-top: 20px;
-}
-.img-jardin {
-  display: flex;
-  align-items: left;
-}
 
 .gardener-details {
-  padding: 50px;
-  align-items: right;
-  margin-left: 20px;
-}
+    padding: 50px;
+    align-items: right;
+    margin-left: 20px;
+    //margin-top: 50px;
+  }
 
-.jardin {
-  width: 450px;
-  height: 250px;
-}
+  .jardin {
+    width: 600px;
+    height: 300px;
+    margin-top: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-left: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
 
-.reviews {
-  height:120px;
-  background-color:rgb(154, 229, 147);
-  margin-top: 20px;
-}
+  .reviews {
+    height:120px;
+    background-color:rgb(154, 229, 147);
+    margin-top: 20px;
+  }
 
-.garden-gardener {
-  display: flex;
-}
+  .avatar{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px; right: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
 
-.avatar{
-  border-radius: 50%;
-}
 
-.card-details {
-  display: flex;
-  margin-top: 30px;
-}
+  .product1{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 200px;
+    width: 500px;
+    margin-bottom: 10px;
+  }
 
-.tomate {
-  border-radius: 50%;
-}
+  .product2{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 200px;
+    width: 500px;
+  }
+
+  .images-show{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .gardener{
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-top: 20px;
+    margin-left: 15px;
+    position: relative;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .product-details{
+    width: 600px;
+    height: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 15px;
+  }
+
+  .card-product{
+    display: flex;
+  }

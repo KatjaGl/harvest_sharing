@@ -37,7 +37,8 @@ p {
   margin-top: 20px;
   border-radius: 20px;
   display: flex;
-  padding-left: 50px;
+  padding-left: 100px;
+  justify-content: center;
   align-items: end;
 }
 
@@ -45,7 +46,7 @@ p {
 #search-form {
   width: 2000px;
   justify-content: center;
-  margin-left: 200px;
+  margin-left: 250px;
 }
 
 // .produit {
@@ -61,7 +62,7 @@ p {
   opacity: 0.6;
   width: 150px;
   justify-content: center;
-  margin-left: 30px;
+  margin-left: 50px;
   margin-top: 47px;
 }
 
