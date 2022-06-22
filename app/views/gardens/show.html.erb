@@ -1,42 +1,35 @@
 <div class = "container" >
-<div class="row">
+  <div class="row">
+    <%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill%>
+    <h2> <%= @garden.name %> </h2>
 
-  <%= cl_image_tag @garden.photo.key, height: 300, width: 400, crop: :fill%>
-
-  <div><h2> <%= @garden.name %> </h2></div>
     <div class="garden-gardener">
       <div class="garden">
         <% @garden.garden_products.each do |garden_product| %>
-          <div class = "card-product">
-            <h5><%= garden_product.product.name%></h5>
-          </div>
-          <div class="card-details">
-            <h5> <%= garden_product.detail_product %></h5>
-            <h5> <%= garden_product.quantity %> kg.</h5>
-          </div>
-      </div>
+          <%= render "card_product", garden_product:garden_product %>
         <% end %>
-
+      </div>
     </div>
+
     <div class = gardener-details>
       <h5> <%= @garden.user.nickname %> </h5>
-      <img class="avatar" alt="avatar" src="https://res.cloudinary.com/drizziyom/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1655470965/Femme76_ans_a8hwta.jpg" />
+      <% if @garden.user.avatar.attached? %>
+        <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>200, :opacity=>100, :radius=>"max", :width=>200, :crop=>"fill"%>
+      <% end %>
       <p> <%= @garden.user.address %></p>
-
       <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
     </div>
 
     <div id= "mapbox-div"
       data-controller="mapbox"
       data-mapbox-markers-value="<%= @markers.to_json %>"
-      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
   <div class = reviews>
     <h5>Les Avis </h5>
-      <p>Robert de Nice</p>
+      <%# <p>Robert de Nice</p>
       <P> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
-        Foncez!</P>
-
+        Foncez!</P> %>
   </div>
 </div>

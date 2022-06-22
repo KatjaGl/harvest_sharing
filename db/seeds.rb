@@ -20,12 +20,14 @@ User.destroy_all
 p "user destroy"
 
 
-user1 = User.create!(nickname: "Jéronimo", last_name: "Delaplace", first_name: "Jérôme", address: "23 bd dubouchage, 06000 Nice", email: "jjj@live.fr", password: "azerty")
+user1 = User.create!(nickname: "Jérome", last_name: "Delaplace", first_name: "Jérôme", address: "23 bd dubouchage, 06000 Nice", email: "jjj@live.fr", password: "azerty")
 user1.presentation = "Je m'appelle Jérôme, j'adore jardiner (mais pas que le dimanche !). J'ai des courgettes de Nice en abondance, non traitées et deux abricotiers de variété Bergeron, à bientôt!"
+user1.avatar.attach(io: File.open('app/assets/images/seed/jerome.jpg'), filename: "jerome.jpg", content_type: "image/jpg")
 user1.save
 p "user create"
-user2 = User.create!(nickname: "Amélie06", last_name: "Delavigne", first_name: "Amélie", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
+user2 = User.create!(nickname: "Amélie", last_name: "Delavigne", first_name: "Amélie", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
 user2.presentation = "Je m'appelle Amelie, depuis toute jeune passionée par la nature et le jardinage, je vous propose de recupérer le surplus de ma production de mes cerisiers, je serai ravie de vous accueillir et partager avec vous un moment convivial."
+user2.avatar.attach(io: File.open('app/assets/images/seed/amelie.jpg'), filename: "amelie.jpg", content_type: "image/jpg")
 user2.save
 user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Manue", address: "15 rue saint-philippe, 06000 Nice", email: "3jj@live.fr", password: "azerty")
 p "user create"
@@ -38,6 +40,8 @@ p "user create"
 user8 = User.create!(nickname: "chouchou", last_name: "Hoffert", first_name: "Arsène", address: "11 Rue Vauquelin, 75005 Paris", email: "dodo@gmail.com", password: "azerty")
 user9 = User.create!(nickname: "Hub", last_name: "Lafont", first_name: "Hubert", address: "31 Rue d'Ulm, 75005 Paris", email: "do@gmail.com", password: "azerty")
 user10 = User.create!(nickname: "Marco", last_name: "Maronnier", first_name: "Marc", address: "4 Rue Vavin, 75006 Paris", email: "zodo@gmail.com", password: "azerty")
+user11 = User.create!(nickname: "Loulou", last_name: "Maier", first_name: "Charlotte", address: "6 avenue du Ray, 06000 Nice", email: "zoddo@gmail.com", password: "azerty")
+user12 = User.create!(nickname: "JL", last_name: "Paraud", first_name: "Jean-Loup", address: "13 avenue Scudéri, 06000 Nice", email: "zo0do@gmail.com", password: "azerty")
 
 garden1 = Garden.create!(name: " Le Jardin Niçois", address: "23 bd dubouchage, 06000 Nice", user_id: user1.id)
 garden1.photo.attach(io: File.open('app/assets/images/seed/jardin3.jpg'), filename: "jardin3.jpg", content_type: "image/jpg")
@@ -66,8 +70,14 @@ p "garden create"
 garden9 = Garden.create!(name: "Le Jardin de Robert", address: "31 Rue d'Ulm, 75005 Paris", user_id: user9.id)
 garden9.photo.attach(io: File.open('app/assets/images/seed/jardin9.jpg'), filename: "jardin9.jpg", content_type: "image/jpg")
 p "garden create"
-garden10 = Garden.create!(name: "Le Jardin Anglais", address: "4 Rue Vavin, 75006 Paris", user_id: user10.id)
-garden10.photo.attach(io: File.open('app/assets/images/seed/jardin10.jpg'), filename: "jardin10exit.jpg", content_type: "image/jpg")
+garden10 = Garden.create!(name: "Mon Potager", address: "4 Rue Vavin, 75006 Paris", user_id: user10.id)
+garden10.photo.attach(io: File.open('app/assets/images/seed/jardin10.jpg'), filename: "jardin10.jpg", content_type: "image/jpg")
+p "garden fini"
+garden11 = Garden.create!(name: "Le Potager de Louise", address: "6 avenue du Ray, 06000 Nice", user_id: user11.id)
+garden11.photo.attach(io: File.open('app/assets/images/seed/jardin11.jpg'), filename: "jardin11.jpg", content_type: "image/jpg")
+p "garden create"
+garden12 = Garden.create!(name: "Le Potager du Sud", address: "13 avenue Scudéri, 06000 Nice", user_id: user12.id)
+garden12.photo.attach(io: File.open('app/assets/images/seed/jardin12.jpg'), filename: "jardin12.jpg", content_type: "image/jpg")
 p "garden fini"
 
 product1 = Product.create!(name: "tomate", category: "vegetable")
@@ -131,8 +141,8 @@ product20 = Product.create!(name: "abricot", category: "fruit")
 product20.photos.attach(io: File.open('app/assets/images/seed/abricot.jpg'), filename: "abricot.jpg", content_type: "image/jpg")
 product20.photos.attach(io: File.open('app/assets/images/seed/abricotier.jpg'), filename: "abricotier.jpg", content_type: "image/jpg")
 
-gardenProduct1 = GardenProduct.create!(product_id: product20.id, garden_id: garden1.id, quantity: "30", detail_product: "j'ai deux abricotiers de variété Bergeron, très juteux et sucrés")
-gardenProduct1 = GardenProduct.create!(product_id: product3.id, garden_id: garden1.id, quantity: "40", detail_product: "beaucoup de courgettes nice, des jaunes et des vertes, à venir chercher pour vos ratatouilles!")
+gardenProduct1 = GardenProduct.create!(product_id: product20.id, garden_id: garden1.id, quantity: "30", detail_product: "j'ai deux abricotiers de variété Bergeron, très juteux et sucrés et des courgettes jaunes et vertes")
+gardenProduct1 = GardenProduct.create!(product_id: product3.id, garden_id: garden1.id, quantity: "40")
 gardenProduct2 = GardenProduct.create!(product_id: product3.id, garden_id: garden2.id, quantity: "50", detail_product: "nous avons planté différentes variétés de tomates: coeur de boeuf, ananas, green zebra...Il y en a pour tous les goûts!")
 gardenProduct2 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "100", detail_product: "j'ai plein de cerises bigarot sur mes deux cerisiers, venez les chercher!")
 gardenProduct3 = GardenProduct.create!(product_id: product3.id, garden_id: garden3.id, quantity: "50")
@@ -147,11 +157,14 @@ gardenProduct7 = GardenProduct.create!(product_id: product19.id, garden_id: gard
 gardenProduct7 = GardenProduct.create!(product_id: product8.id, garden_id: garden7.id, quantity: "52")
 gardenProduct8 = GardenProduct.create!(product_id: product20.id, garden_id: garden8.id, quantity: "5")
 gardenProduct8 = GardenProduct.create!(product_id: product3.id, garden_id: garden8.id, quantity: "30")
-gardenProduct9 = GardenProduct.create!(product_id: product10.id, garden_id: garden9.id, quantity: "10")
-gardenProduct9 = GardenProduct.create!(product_id: product20.id, garden_id: garden9.id, quantity: "35")
+gardenProduct9 = GardenProduct.create!(product_id: product15.id, garden_id: garden9.id, quantity: "10")
+gardenProduct9 = GardenProduct.create!(product_id: product2.id, garden_id: garden9.id, quantity: "35")
 gardenProduct10 = GardenProduct.create!(product_id: product12.id, garden_id: garden10.id, quantity: "40")
 gardenProduct10 = GardenProduct.create!(product_id: product20.id, garden_id: garden10.id, quantity: "55")
-
+gardenProduct11 = GardenProduct.create!(product_id: product15.id, garden_id: garden11.id, quantity: "20")
+gardenProduct11 = GardenProduct.create!(product_id: product16.id, garden_id: garden11.id, quantity: "35")
+gardenProduct12 = GardenProduct.create!(product_id: product17.id, garden_id: garden12.id, quantity: "10")
+gardenProduct12 = GardenProduct.create!(product_id: product18.id, garden_id: garden12.id, quantity: "25")
 
 
 # gardenProductCharacteristic1 = GardenProductCharacteristic.create!(garden_product_id: gardenProduct1.id, characteristic_id: characteristic1.id )
