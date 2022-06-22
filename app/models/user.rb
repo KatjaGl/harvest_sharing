@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :gardens
   has_many :messages
   has_many :reviews
+  has_one_attached :avatar
 end
