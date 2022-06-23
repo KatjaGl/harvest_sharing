@@ -1,10 +1,14 @@
 .like-icon{
   .fa-heart{
     color: black;
+    position: absolute;
+    top: 20px; right: 20px;
   }
 }
 .red {
   .fa-heart{
     color: red!important;
+    position: absolute;
+    top: 20px; right: 20px;
   }
 }
