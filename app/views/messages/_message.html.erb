@@ -5,7 +5,7 @@
         <%= message.user.nickname.capitalize %>
       </div>
       <div class="message_info">
-        <%= message.created_at.strftime("%a %b %e at %l:%M %p") %>
+        <%= message.created_at.strftime("le %d.%m.%y à %l:%M ") %>
       </div>
       <div class="message_body">
         <%= message.content %>

@@ -13,8 +13,8 @@ $dark: #777777;
   overflow: auto;
 }
 
-.chatlist .message_container {
-
+.text_area {
+  width: 300px;
 }
 
 .chatlist .message_container .message {
@@ -24,6 +24,7 @@ $dark: #777777;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
+  word-wrap: break-word;
 
   -webkit-border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -33,6 +34,7 @@ $dark: #777777;
   border-color: $dark;
   float: right;
   text-align: right;
+  word-wrap: break-word;
 
   -webkit-border-bottom-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -49,4 +51,20 @@ $dark: #777777;
   display: flex;
   justify-content: space-around;
   color: #777777;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
 }
