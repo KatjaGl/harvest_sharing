@@ -31,22 +31,28 @@ p {
   font-family: 'Noto Sans', sans-serif;
 }
 
+h3  {
+  font-family: 'Nunito', 'Helvetica', 'sans-serif';
+  font-weight: bold;
+}
+
 
 // .autres {
 //   text-align: right;
 // }
 
 
-// .search-home {
-//   text-align: center;
-//   justify-content: space-between;
-//   margin-top: 20px;
-//   border-radius: 20px;
-//   display: flex;
-//   // padding-left: 100px;
-//   justify-content: center;
-//   align-items: center;
-// }
+.search-home {
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 20px;
+  // display: flex;
+  padding-left: 100px;
+  justify-content: center;
+
+  // align-items: center;
+}
 
 
 // #search-form {
@@ -87,7 +93,15 @@ p {
   overflow: hidden;
 }
 
+#trouver-button {
+  text-align: left;
+}
+.trouver-button{
+  width: 60%;
+}
 
+
+//  width: 60%;
 // .box {
 //   display: flex;
 //   justify-content: center;
@@ -98,7 +112,7 @@ p {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
+  padding: 0.45rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
