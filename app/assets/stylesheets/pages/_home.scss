@@ -31,9 +31,9 @@ h2 {
 
 p {
   color: black;
-  font-size: 20px;
   font-family: 'Noto Sans', sans-serif;
 }
+
 
 // .autres {
 //   text-align: right;
@@ -85,7 +85,10 @@ p {
   color: orange;
 }
 
-
+.border-photo img {
+  border-radius: 15px;
+  overflow: hidden;
+}
 
 
 // .box {
