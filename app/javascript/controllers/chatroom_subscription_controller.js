@@ -16,12 +16,12 @@ export default class extends Controller {
     this.channel.unsubscribe()
   }
 
-  resetForm(event) {
-    event.target.reset()
-  }
-
   #insertMessageAndScrollDown(data) {
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+    window.location.reload()
+  }
+  resetForm(event) {
+    event.target.reset()
   }
 }
