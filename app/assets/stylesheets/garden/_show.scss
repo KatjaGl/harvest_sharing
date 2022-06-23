@@ -1,111 +1,71 @@
-// .gardener-grid{
-//   display: grid;
-//   grid-template-columns: 2fr 1fr;
-// }
+.container{
+  margin-top: 5%;
+}
 
 .gardener-details {
-    // padding: 50px;
-    // align-items: right;
-    // margin-left: 20px;
-    //margin-top: 50px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  }
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-left:100px ;
+}
+.reviews {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.garden-name{
+  justify-content: center;
+}
 
-  // .jardin {
-  //   width: 600px;
-  //   height: 300px;
-  //   margin-top: 20px;
-  //   border-top-left-radius: 15px;
-  //   border-bottom-left-radius: 15px;
-  //   margin-left: 15px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // }
+.gardener-presentation{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  position: relative;
+}
 
-  .reviews {
-    // height:100px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-   // margin-top: 40px;
-    border-radius: 15px;
-    text-align: center;
-  }
-
-  // .avatar{
-  //   width: 100px;
-  //   height: 100px;
-  //   position: absolute;
-  //   top: 20px; right: 20px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // }
+.garden-all{
+  display: flex;
+  justify-content: space-between;
+}
 
 
-  // .product1{
-  //   border-top-left-radius: 15px;
-  //   border-top-right-radius: 15px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //   height: 200px;
-  //   width: 500px;
-  //   margin-bottom: 10px;
-  // }
+.garden-details{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  text-align: center;
+}
+.gardener-grid{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+}
 
-  // .product2{
-  //   border-bottom-right-radius: 15px;
-  //   border-bottom-left-radius: 15px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //   height: 200px;
-  //   width: 500px;
-  // }
+.gardner img {
+  border-radius: 15px;
+}
 
-  // .images-show{
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
+.avatar{
+  position: absolute;
+  top: 31px; right: 100px;
+}
 
-  // .gardener{
-  //   width: 520px;
-  //   height: 300px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //   margin-top: 20px;
-  //   margin-left: 15px;
-  //   position: relative;
-  //   border-bottom-right-radius: 15px;
-  //   border-top-right-radius: 15px;
-  //   object-fit: contain;
-  // }
+.gardner-name{
+  text-align: left;
+  margin-top: 50px;
+  margin-left:120px ;
+}
 
-  // .card-product{
-  //   display: flex;
-  //   height: 300px;
-  //   //justify-content: space-between;
-  // }
+.gardner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-
-  // .jardin-gardner{
-  //   width: 500px;
-  //   height: 300px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //   margin-top: 20px;
-  //   margin-left: 15px;
-  //   position: relative;
-  //   border-bottom-left-radius: 15px;
-  //   border-top-left-radius: 15px;
-  //   object-fit: contain;
-  // }
-
-  .garden-name{
-    justify-content: center;
-    // margin-top: 70px;
-  }
-
-
-  // .mapbox-div{
-  //   margin-top: 30px;
-  //   width :100%;
-  // }
-
-  .container{
-  margin-top: 5%;
-  }
-
-  .row{
-  margin-top: 1%;
-  }
+.gardner img {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-width: 100%;
+  max-height: 100%;
+}
