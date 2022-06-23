@@ -1,45 +1,43 @@
-
 .garden-card {
   text-align: center;
-  // margin: 20px;
-  // width: 248px;
-  // height:345px;
+  margin: 20px;
+  width: 248px;
+  height:345px;
   overflow: hidden;
-  // margin-top: 50px;
+  margin-top: 50px;
   position: relative;
-  background-color: transparent;
 }
 
-a {
+a{
   text-decoration: none;
 }
 
-// .box-gardens {
-  // display: grid;
-  // grid-template-columns: repeat(4,1fr);
-  // margin-left: 60px;
-// }
+.box-gardens {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-left: 60px;
+}
 
-// .garden-img {
-//   border-radius: 15px;
-//   width: 248px;
-//   height: 258px;
-// }
+.garden-img{
+  border-radius: 15px;
+  width: 248px;
+  height: 258px;
+}
 
-
-.garden-heart {
+#heart {
   position: absolute;
   top: 20px; right: 20px;
   color: gainsboro;
 }
 
-.garden-heart-favorit {
+#heart-favori{
+  position: absolute;
+  top: 20px; right: 20px;
   color: rgb(236, 64, 11);
 }
 
 
-
-.card-text{
+#card-text{
 color: green;
 }
 // .box-garden .card-garden-infos {
