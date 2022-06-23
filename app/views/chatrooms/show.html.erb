@@ -22,7 +22,7 @@
         html: {data: {action: "ajax:success->chatroom-subscription#resetForm"} } do |f|
         %>
         <%= f.input :content,
-          label: false, placeholder: "Votre message à #{@chatroom.recipient.nickname.capitalize} ", wrapper_html: {class: "flex-grow-1"} %>
+          label: false, placeholder: "Votre message à #{@chatroom.recipient.nickname.capitalize} ", wrapper_html: {class: "flex-grow-1 text_area"} %>
           <%= f.submit "Envoyer", class: "btn btn-success" %>
         <% end %>
       </div>
