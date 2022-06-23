@@ -13,7 +13,13 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <h2>MES FAVORIS</h2>
+      <% if @sugg_gardens.nil? %>
+        <h2> MES FAVORIS </h2>
+      <% end %>
+      <% if @gardens.nil? %>
+        <h2> SUGGESTION DE JARDINS </h2>
+        <% @gardens = @sugg_gardens %>
+      <% end %>
     </div>
   </div>
   <div class="row align-items-space-around">

@@ -4,7 +4,7 @@
     <% n=0 %>
       <% @images_products.each do |photo| %>
       <div class="carousel-item <%= caroussel_class[n] %>">
-        <%= cl_image_tag photo, :height=>300, :width=>500, :radius => 15,crop: "scale" %>
+        <%= cl_image_tag photo %>
       </div>
       <% n+=1%>
       <% end %>
