@@ -25,15 +25,23 @@
   display: flex;
   height: 100px;
 	background-color: #B4DB74;
-	justify-content: space-between;
+
 }
 
 #navbarSupportedContent ul li a{
 	color: white;
   font-size: 20px;
-  display: block;
-  padding: 35px 60px;
+  // display: block;
+  // padding: 35px 60px;
+  padding-left: 15px;
+  padding-right: 25px;
 
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: relative;
+}
+
+.nav-item {
+  margin-top: 5%;
+  justify-content: space-between;
+  // align-items: center;
 }
