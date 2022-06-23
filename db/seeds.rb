@@ -21,15 +21,15 @@ p "user destroy"
 
 
 user1 = User.create!(nickname: "Jérome", last_name: "Delaplace", first_name: "Jérôme", address: "23 bd dubouchage, 06000 Nice", email: "jjj@live.fr", password: "azerty")
-user1.presentation = "J'adore jardiner (mais pas que le dimanche !). J'ai des courgettes de Nice en abondance, non traitées et deux abricotiers de variété Bergeron, à bientôt!"
+user1.presentation = "J'adore jardiner (mais pas que le dimanche !). Mes fruits et mes legumes sont non traitées ce qui fait toute la différence, si ça vous interesse n'hesitez surtout pas à me contacter!"
 user1.avatar.attach(io: File.open('app/assets/images/seed/jerome.jpg'), filename: "jerome.jpg", content_type: "image/jpg")
 user1.save
 p "user create"
 user2 = User.create!(nickname: "Amélie", last_name: "Delavigne", first_name: "Amélie", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
-user2.presentation = "Passionée par la nature et le jardinage, je vous propose de recupérer le surplus de ma production de mes cerisiers, je serai ravie de vous accueillir dans jardin."
+user2.presentation = "Passionée par la nature et le jardinage, je vous propose de recupérer le surplus de ma production de mes arbres fruitiers, je serai ravie de vous accueillir dans mon jardin."
 user2.avatar.attach(io: File.open('app/assets/images/seed/amelie avatar.jpg'), filename: "amelie avatar.jpg", content_type: "image/jpg")
 user2.save
-user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Manue", address: "15 rue saint-philippe, 06000 Nice", email: "3jj@live.fr", password: "azerty")
+user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Emmanuelle", address: "15 rue saint-philippe, 06000 Nice", email: "3jj@live.fr", password: "azerty")
 p "user create"
 user4 = User.create!(nickname: "Jas", last_name: "Derrag", first_name: "Jasmine", address: "10 rue Massenet, 06000 Nice", email: "jas@gmail.com", password: "azerty")
 user5 = User.create!(nickname: "Kat", last_name: "Demas", first_name: "Katia", address: "4 place Pellegrini, 06300 Nice", email: "jkj@live.fr", password: "azerty")
