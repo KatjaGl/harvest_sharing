@@ -143,8 +143,8 @@ product20.photos.attach(io: File.open('app/assets/images/seed/abricotier.jpg'), 
 
 gardenProduct1 = GardenProduct.create!(product_id: product20.id, garden_id: garden1.id, quantity: "30", detail_product: "j'ai deux abricotiers de variété Bergeron, très juteux et sucrés et des courgettes jaunes et vertes")
 gardenProduct1 = GardenProduct.create!(product_id: product3.id, garden_id: garden1.id, quantity: "40")
-gardenProduct2 = GardenProduct.create!(product_id: product3.id, garden_id: garden2.id, quantity: "50", detail_product: "nous avons planté différentes variétés de tomates: coeur de boeuf, ananas, green zebra...Il y en a pour tous les goûts!")
-gardenProduct2 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "100", detail_product: "j'ai plein de cerises bigarot sur mes deux cerisiers, venez les chercher!")
+gardenProduct2 = GardenProduct.create!(product_id: product3.id, garden_id: garden2.id, quantity: "50", detail_product: "j'ai plein de cerises bigarot sur mes deux cerisiers, venez les chercher! nous avons planté différentes variétés de tomates: coeur de boeuf, ananas, green zebra...Il y en a pour tous les goûts!")
+gardenProduct2 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "100")
 gardenProduct3 = GardenProduct.create!(product_id: product3.id, garden_id: garden3.id, quantity: "50")
 gardenProduct3 = GardenProduct.create!(product_id: product4.id, garden_id: garden3.id, quantity: "30")
 gardenProduct4 = GardenProduct.create!(product_id: product16.id, garden_id: garden4.id, quantity: "10")

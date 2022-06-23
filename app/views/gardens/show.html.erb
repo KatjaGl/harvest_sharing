@@ -14,7 +14,7 @@
     <div class = gardener-details>
       <h5> <%= @garden.user.nickname %> </h5>
       <% if @garden.user.avatar.attached? %>
-        <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>200, :opacity=>100, :radius=>"max", :width=>200, :crop=>"fill"%>
+        <%= cl_image_tag @garden.user.avatar.key, aspect_ratio: 1:1, border: 5px_solid_rgb:f4eeee, gravity: auto, height: 200, opacity: 100, radius: "max", width: 200, crop: :fill%>
       <% end %>
       <p> <%= @garden.user.address %></p>
       <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
