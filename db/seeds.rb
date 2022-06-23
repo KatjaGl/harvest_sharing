@@ -27,7 +27,7 @@ user1.save
 p "user create"
 user2 = User.create!(nickname: "Amélie", last_name: "Delavigne", first_name: "Amélie", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
 user2.presentation = "Je m'appelle Amelie, depuis toute jeune passionée par la nature et le jardinage, je vous propose de recupérer le surplus de ma production de mes cerisiers, je serai ravie de vous accueillir et partager avec vous un moment convivial."
-user2.avatar.attach(io: File.open('app/assets/images/seed/amelie.jpg'), filename: "amelie.jpg", content_type: "image/jpg")
+user2.avatar.attach(io: File.open('app/assets/images/seed/amelie avatar.jpg'), filename: "amelie avatar.jpg", content_type: "image/jpg")
 user2.save
 user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Manue", address: "15 rue saint-philippe, 06000 Nice", email: "3jj@live.fr", password: "azerty")
 p "user create"
@@ -143,8 +143,8 @@ product20.photos.attach(io: File.open('app/assets/images/seed/abricotier.jpg'), 
 
 gardenProduct1 = GardenProduct.create!(product_id: product20.id, garden_id: garden1.id, quantity: "30", detail_product: "j'ai deux abricotiers de variété Bergeron, très juteux et sucrés et des courgettes jaunes et vertes")
 gardenProduct1 = GardenProduct.create!(product_id: product3.id, garden_id: garden1.id, quantity: "40")
-gardenProduct2 = GardenProduct.create!(product_id: product3.id, garden_id: garden2.id, quantity: "50", detail_product: "nous avons planté différentes variétés de tomates: coeur de boeuf, ananas, green zebra...Il y en a pour tous les goûts!")
-gardenProduct2 = GardenProduct.create!(product_id: product20.id, garden_id: garden2.id, quantity: "100", detail_product: "j'ai plein de cerises bigarot sur mes deux cerisiers, venez les chercher!")
+gardenProduct2 = GardenProduct.create!(product_id: product16.id, garden_id: garden2.id, quantity: "50")
+gardenProduct2 = GardenProduct.create!(product_id: product1.id, garden_id: garden2.id, quantity: "100", detail_product: "nous avons planté différentes variétés de tomates: coeur de boeuf, ananas, green zebra...Il y en a pour tous les goûts! j'ai plein de cerises bigarot également, à bientôt!")
 gardenProduct3 = GardenProduct.create!(product_id: product3.id, garden_id: garden3.id, quantity: "50")
 gardenProduct3 = GardenProduct.create!(product_id: product4.id, garden_id: garden3.id, quantity: "30")
 gardenProduct4 = GardenProduct.create!(product_id: product16.id, garden_id: garden4.id, quantity: "10")
