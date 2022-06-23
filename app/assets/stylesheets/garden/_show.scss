@@ -34,6 +34,7 @@
 
 
 .garden-details{
+  padding-top: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 15px;
   text-align: center;
@@ -58,6 +59,11 @@
 .gardner-name{
   margin-top: 50px;
   width: 300px;
+
+  h5 {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 }
 
 .gardner {
@@ -105,4 +111,11 @@
     p {
       font-size: 1.2rem;
     }
+  }
+
+
+  #size-details{
+  P{
+    font-size: 1.2rem;
+  }
   }

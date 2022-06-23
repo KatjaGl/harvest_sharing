@@ -11,7 +11,7 @@
     <div class ="gardener-presentation">
       <div class="name-avatar">
         <div class="gardner-name">
-          <h5> <%= @garden.user.nickname %><p><%= @garden.user.address %></p> </h5>
+          <h5> <%= @garden.user.nickname %> </h5><p><%= @garden.user.address %></p>
         </div>
         <div class="avatar">
           <% if @garden.user.avatar.attached? %>
@@ -35,7 +35,7 @@
 
       <% @garden_products.each do |garden_product| %>
         <p><strong><%= garden_product.product.name.capitalize %></strong></p>
-        <p><%= garden_product.detail_product%></p>
+        <p id="size-details"><%= garden_product.detail_product%></p>
         <p>Quantité: <%= garden_product.quantity%> Kg </p>
       <% end %>
     </div>
@@ -54,9 +54,9 @@
       <br>
     </div>
 
-</div>
     <div class="col-12" id= "mapbox-div"
       data-controller="mapbox"
       data-mapbox-markers-value="<%= @markers.to_json %>"
       data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+</div>
