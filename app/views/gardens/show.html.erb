@@ -9,23 +9,29 @@
     </div>
 
     <div class ="gardener-presentation">
-    <div class="gardner-name">
-      <h5> <%= @garden.user.nickname %> </h5>
-    </div>
-    <div class="avatar">
-      <% if @garden.user.avatar.attached? %>
-        <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>120, :opacity=>100, :radius=>"max", :width=>120, :crop=>"fill" %>
-      <% end %>
-    </div>
-
-      <p> <%= @garden.user.address %></p>
-      <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
+      <div class="name-avatar">
+        <div class="gardner-name">
+          <h5> <%= @garden.user.nickname %><p><%= @garden.user.address %></p> </h5>
+          <p><%= @garden.user.presentation %> </p>
+        </div>
+        <div class="avatar">
+          <% if @garden.user.avatar.attached? %>
+            <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>120, :opacity=>100, :radius=>"max", :width=>120, :crop=>"fill" %>
+          <% end %>
+        </div>
+      </div>
+        <div class="send">
+          <%= link_to chatrooms_path(user: @garden.user), method: :post do %>
+          <i class="fa fa-envelope"></i>
+          <% end %>
+        </div>
     </div>
 
     <div class=" garden-details">
+    <br>
       <% @garden_products.each do |garden_product| %>
-        <p>Description de <%= garden_product.product.name %></p>
-        <p><%= garden_product.detail_product%></p> <br>
+        <p>Description : <%= garden_product.product.name %></p>
+        <p><%= garden_product.detail_product%></p>
         <p>Quantité: <%= garden_product.quantity%> Kg </p>
       <% end %>
     </div>

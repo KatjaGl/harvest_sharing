@@ -6,6 +6,7 @@
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding-left:100px ;
+  text-align: center;
 }
 .reviews {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -21,7 +22,8 @@
 .gardener-presentation{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 15px;
-  position: relative;
+  text-align: center;
+  //position: relative;
 }
 
 .garden-all{
@@ -47,25 +49,42 @@
 }
 
 .avatar{
-  position: absolute;
   top: 31px; right: 100px;
 }
 
 .gardner-name{
-  text-align: left;
   margin-top: 50px;
-  margin-left:120px ;
+  width: 300px;
 }
 
 .gardner {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .gardner img {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   max-width: 100%;
   max-height: 100%;
+}
+
+.name-avatar{
+  display: flex;
+}
+
+.send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: rgba(80, 179, 80, 0.705);
+    transition: 0.2s;
+    font-size: 40px;
+    &:hover {
+      color: rgb(80, 179, 80);
+      transition: 0.2s;
+    }
+  }
 }

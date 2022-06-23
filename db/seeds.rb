@@ -21,12 +21,12 @@ p "user destroy"
 
 
 user1 = User.create!(nickname: "Jérome", last_name: "Delaplace", first_name: "Jérôme", address: "23 bd dubouchage, 06000 Nice", email: "jjj@live.fr", password: "azerty")
-user1.presentation = "Je m'appelle Jérôme, j'adore jardiner (mais pas que le dimanche !). J'ai des courgettes de Nice en abondance, non traitées et deux abricotiers de variété Bergeron, à bientôt!"
+user1.presentation = "J'adore jardiner (mais pas que le dimanche !). J'ai des courgettes de Nice en abondance, non traitées et deux abricotiers de variété Bergeron, à bientôt!"
 user1.avatar.attach(io: File.open('app/assets/images/seed/jerome.jpg'), filename: "jerome.jpg", content_type: "image/jpg")
 user1.save
 p "user create"
 user2 = User.create!(nickname: "Amélie", last_name: "Delavigne", first_name: "Amélie", address: "2 avenue Malaussena, 06000 Nice", email: "mariac@gmail.com", password: "azerty")
-user2.presentation = "Je m'appelle Amelie, depuis toute jeune passionée par la nature et le jardinage, je vous propose de recupérer le surplus de ma production de mes cerisiers, je serai ravie de vous accueillir et partager avec vous un moment convivial."
+user2.presentation = "Passionée par la nature et le jardinage, je vous propose de recupérer le surplus de ma production de mes cerisiers, je serai ravie de vous accueillir dans jardin."
 user2.avatar.attach(io: File.open('app/assets/images/seed/amelie avatar.jpg'), filename: "amelie avatar.jpg", content_type: "image/jpg")
 user2.save
 user3 = User.create!(nickname: "Manue", last_name: "Mapelli", first_name: "Manue", address: "15 rue saint-philippe, 06000 Nice", email: "3jj@live.fr", password: "azerty")
@@ -141,10 +141,10 @@ product20 = Product.create!(name: "abricot", category: "fruit")
 product20.photos.attach(io: File.open('app/assets/images/seed/abricot.jpg'), filename: "abricot.jpg", content_type: "image/jpg")
 product20.photos.attach(io: File.open('app/assets/images/seed/abricotier.jpg'), filename: "abricotier.jpg", content_type: "image/jpg")
 
-gardenProduct1 = GardenProduct.create!(product_id: product20.id, garden_id: garden1.id, quantity: "30", detail_product: "j'ai deux abricotiers de variété Bergeron, très juteux et sucrés et des courgettes jaunes et vertes")
-gardenProduct1 = GardenProduct.create!(product_id: product3.id, garden_id: garden1.id, quantity: "40")
-gardenProduct2 = GardenProduct.create!(product_id: product16.id, garden_id: garden2.id, quantity: "50")
-gardenProduct2 = GardenProduct.create!(product_id: product1.id, garden_id: garden2.id, quantity: "100", detail_product: "nous avons planté différentes variétés de tomates: coeur de boeuf, ananas, green zebra...Il y en a pour tous les goûts! j'ai plein de cerises bigarot également, à bientôt!")
+gardenProduct1 = GardenProduct.create!(product_id: product20.id, garden_id: garden1.id, quantity: "3", detail_product: "J'ai deux abricotiers de variété Bergeron, très juteux et sucrés.")
+gardenProduct1 = GardenProduct.create!(product_id: product3.id, garden_id: garden1.id, quantity: "20", detail_product: "J'ai des courgettes de Nice jaunes et vertes de différentes tailles.")
+gardenProduct2 = GardenProduct.create!(product_id: product16.id, garden_id: garden2.id, quantity: "10", detail_product: "J'ai deux cerisiers de variété 'Bigarot', elles sont délicieuses!")
+gardenProduct2 = GardenProduct.create!(product_id: product1.id, garden_id: garden2.id, quantity: "5", detail_product: "Nous avons planté différentes variétés de tomates: coeur de boeuf, ananas, green zebra...Il y en a pour tous les goûts!")
 gardenProduct3 = GardenProduct.create!(product_id: product3.id, garden_id: garden3.id, quantity: "50")
 gardenProduct3 = GardenProduct.create!(product_id: product4.id, garden_id: garden3.id, quantity: "30")
 gardenProduct4 = GardenProduct.create!(product_id: product16.id, garden_id: garden4.id, quantity: "10")
