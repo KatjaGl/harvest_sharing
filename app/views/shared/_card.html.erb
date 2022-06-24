@@ -1,11 +1,12 @@
-<div class = "col-3 garden-card">
-  <%= render 'shared/favorite_like_button', garden:garden %>
-  <%= link_to garden_path(garden) do %>
-    <%= cl_image_tag garden.photo.key, :transformation =>
-    {crop: "scale", width: 248, height: 258, radius: 15}, class: "garden-img" %>
-    <div class="card-garden-infos">
-      <h5 class="card-text" ><strong> <%=garden.name%></strong></h5>
-      <p><%=garden.address%></p>
-    </div>
-  <% end %>
+<div class = "col-3 garden-card ">
+  <div class = " garden-card-centrage">
+    <%= render 'shared/favorite_like_button', garden:garden %>
+    <%= link_to garden_path(garden) do %>
+      <%= cl_image_tag garden.photo.key, class: "garden-img" %>
+      <div class="card-garden-infos">
+        <h5 class="card-text" ><strong> <%=garden.name%></strong></h5>
+        <p><%=garden.address%></p>
+      </div>
+    <% end %>
+  </div>
 </div>

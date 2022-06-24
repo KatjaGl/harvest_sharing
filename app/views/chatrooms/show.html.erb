@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
       <div class="col-12">
         <h1>Bonjour <%= current_user.nickname %>!</h1>
-        <h2><%= @chatroom.recipient.gardens[0].name.capitalize %> de <%= @chatroom.recipient.nickname.capitalize %>. </h2>
+        <h2><%= @chatroom.recipient.gardens[0].name %> de <%= @chatroom.recipient.nickname.capitalize %>. </h2>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -22,7 +22,7 @@
         html: {data: {action: "ajax:success->chatroom-subscription#resetForm"} } do |f|
         %>
         <%= f.input :content,
-          label: false, placeholder: "Votre message à #{@chatroom.recipient.nickname.capitalize} ", wrapper_html: {class: "flex-grow-1"} %>
+          label: false, placeholder: "Votre message à #{@chatroom.recipient.nickname.capitalize} ", wrapper_html: {class: "flex-grow-1 text_area"} %>
           <%= f.submit "Envoyer", class: "btn btn-success" %>
         <% end %>
       </div>
@@ -36,13 +36,13 @@
   <%# </a> %>
 <%# </div> %>
   <div class="link_return">
-    <%= link_to "Return", :back, class: "link_return"%>
+    <%= link_to "Retourner", :back, class: "link_return"%>
     <%= link_to "Les Jardins", gardens_path, class: "link_return" %>
   </div>
 <% else %>
   <div class="row justify-content-center">
     <div class="col-12">
-      Kein Chat gefunden
+      Il n'y a pas de chat.
     </div>
   </div>
 <% end %>

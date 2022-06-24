@@ -1,7 +1,7 @@
 .garden-card {
   text-align: center;
   margin: 20px;
-  width: 248px;
+  width: 280px;
   height:345px;
   overflow: hidden;
   margin-top: 50px;
@@ -24,22 +24,36 @@ a{
   height: 258px;
 }
 
-#heart {
-  position: absolute;
-  top: 20px; right: 20px;
-  color: gainsboro;
-}
+// #heart {
+//   position: absolute;
+//   top: 20px; right: 20px;
+//   color: gainsboro;
+// }
 
-#heart-favori{
-  position: absolute;
-  top: 20px; right: 20px;
-  color: rgb(236, 64, 11);
-}
+// #heart-favori{
+//   position: absolute;
+//   top: 20px; right: 20px;
+//   color: rgb(236, 64, 11);
+// }
 
 
 #card-text{
 color: green;
 }
+
+
+.garden-card-centrage {
+  flex: 1 0 auto;
+  height: 268px;
+  width: 258px;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 // .box-garden .card-garden-infos {
 //   padding: 16px;
 //   display: flex;

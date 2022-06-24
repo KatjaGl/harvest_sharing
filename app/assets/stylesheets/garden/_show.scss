@@ -1,111 +1,121 @@
-// .gardener-grid{
-//   display: grid;
-//   grid-template-columns: 2fr 1fr;
-// }
+.container{
+  margin-top: 5%;
+}
 
 .gardener-details {
-    // padding: 50px;
-    // align-items: right;
-    // margin-left: 20px;
-    //margin-top: 50px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.reviews {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.garden-name{
+  justify-content: center;
+}
+
+.gardener-presentation{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.garden-all{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.garden-details{
+  padding-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  text-align: center;
+}
+.gardener-grid{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+}
+
+.gardner img {
+  border-radius: 15px;
+}
+
+.avatar{
+  margin-top: 30px;
+  width: 120px;
+  height: 120px;
+}
+
+.gardner-name{
+  margin-top: 50px;
+  width: 300px;
+
+  h5 {
+    font-weight: 600;
+    text-transform: uppercase;
   }
+}
 
-  // .jardin {
-  //   width: 600px;
-  //   height: 300px;
-  //   margin-top: 20px;
-  //   border-top-left-radius: 15px;
-  //   border-bottom-left-radius: 15px;
-  //   margin-left: 15px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // }
+.gardner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .reviews {
-    // height:100px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-   // margin-top: 40px;
-    border-radius: 15px;
-    text-align: center;
+.gardner img {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.name-avatar{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: rgba(80, 179, 80, 0.705);
+    transition: 0.2s;
+    font-size: 40px;
+    &:hover {
+      color: rgb(80, 179, 80);
+      transition: 0.2s;
+    }
   }
+}
 
-  // .avatar{
-  //   width: 100px;
-  //   height: 100px;
-  //   position: absolute;
-  //   top: 20px; right: 20px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  // }
+  .presentation{
 
-
-  // .product1{
-  //   border-top-left-radius: 15px;
-  //   border-top-right-radius: 15px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //   height: 200px;
-  //   width: 500px;
-  //   margin-bottom: 10px;
-  // }
-
-  // .product2{
-  //   border-bottom-right-radius: 15px;
-  //   border-bottom-left-radius: 15px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //   height: 200px;
-  //   width: 500px;
-  // }
-
-  // .images-show{
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
-
-  // .gardener{
-  //   width: 520px;
-  //   height: 300px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //   margin-top: 20px;
-  //   margin-left: 15px;
-  //   position: relative;
-  //   border-bottom-right-radius: 15px;
-  //   border-top-right-radius: 15px;
-  //   object-fit: contain;
-  // }
-
-  // .card-product{
-  //   display: flex;
-  //   height: 300px;
-  //   //justify-content: space-between;
-  // }
-
-
-  // .jardin-gardner{
-  //   width: 500px;
-  //   height: 300px;
-  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  //   margin-top: 20px;
-  //   margin-left: 15px;
-  //   position: relative;
-  //   border-bottom-left-radius: 15px;
-  //   border-top-left-radius: 15px;
-  //   object-fit: contain;
-  // }
-
-  .garden-name{
+    display: flex;
     justify-content: center;
-    // margin-top: 70px;
+  }
+
+  .presentation-content {
+    text-align: center;
+    width: 30vw;
+    p {
+      font-size: 1.2rem;
+    }
   }
 
 
-  // .mapbox-div{
-  //   margin-top: 30px;
-  //   width :100%;
-  // }
-
-  .container{
-  margin-top: 5%;
+  #size-details{
+  P{
+    font-size: 1.2rem;
   }
-
-  .row{
-  margin-top: 1%;
   }

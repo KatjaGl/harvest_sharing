@@ -1,21 +1,21 @@
 <%= form_tag gardens_path, method: :get, id:'search-form' do %>
   <div class="row">
-    <div class="col-lg-4">
-      <p>Choisir une ville</p>
-        <%= text_field_tag :query_address,
-        params[:query_address],
+      <div class="col-lg-4">
+        <h4>Choisir une ville</h4>
+          <%= text_field_tag :query_address,
+          params[:query_address],
+          class: "form-control d-flex align-items-center justify-content-center localisation",
+          placeholder: "Marseille"%>
+      </div>
+      <div class="col-lg-4">
+        <h4>Choisir un produit</h4>
+        <%= text_field_tag :query_product,
+        params[:query_product],
         class: "form-control d-flex align-items-center justify-content-center localisation",
-        placeholder: "Marseille"%>
-    </div>
-    <div class="col-lg-4">
-      <p>Choisir un produit</p>
-      <%= text_field_tag :query_product,
-      params[:query_product],
-      class: "form-control d-flex align-items-center justify-content-center localisation",
-      placeholder: "Courgette" %>
-    </div>
-    <div class="col-lg-4">
-      <%= submit_tag "TROUVER", class: "btn btn-success" %>
-    </div>
+        placeholder: "Courgette" %>
+      </div>
+      <div class="col-lg-4" id="trouver-button" style="position:relative;">
+        <input type="submit" name="commit" value="TROUVER" class="btn btn-success trouver-button" data-disable-with="TROUVER" style="position: absolute; bottom: 0;">
+      </div>
   </div>
 <% end %>

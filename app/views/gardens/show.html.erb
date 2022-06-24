@@ -1,50 +1,62 @@
 <div class = "container" >
-  <div class="row">
-    <div class="col-12 garden-name">
+    <div class=" garden-name">
       <h2> <%= @garden.name %> </h2>
     </div>
-  </div>
-  <div class="row">
-  <%# <div class =" gardener-grid"> %>
-    <div class =" col-7 gardner" >
-      <%= cl_image_tag @garden.photo.key, :transformation =>
-      {crop: "scale", width: 665, height: 300, radius: 15}%>
+
+  <div class ="gardener-grid">
+    <div class ="gardner" >
+      <%= cl_image_tag @garden.photo.key %>
     </div>
-    <div class ="col-5 gardener-details">
-      <h5> <%= @garden.user.nickname %> </h5>
-      <% if @garden.user.avatar.attached? %>
-        <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>200, :opacity=>100, :radius=>"max", :width=>200, :crop=>"fill" %>
-      <% end %>
-      <p> <%= @garden.user.address %></p>
-      <%= link_to "Send a message", chatrooms_path(user: @garden.user), method: :post%>
+
+    <div class ="gardener-presentation">
+      <div class="name-avatar">
+        <div class="gardner-name">
+          <h5> <%= @garden.user.nickname %> </h5><p><%= @garden.user.address %></p>
+        </div>
+        <div class="avatar">
+          <% if @garden.user.avatar.attached? %>
+            <%= cl_image_tag @garden.user.avatar.key, :aspect_ratio=>"1:1", :border=>"5px_solid_rgb:f4eeee", :gravity=>"auto", :height=>120, :opacity=>100, :radius=>"max", :width=>120, :crop=>"fill" %>
+          <% end %>
+        </div>
+      </div>
+        <div class="presentation">
+          <div class="presentation-content">
+            <p><%= @garden.user.presentation %> </p>
+          </div>
+        </div>
+        <div class="send">
+          <%= link_to chatrooms_path(user: @garden.user), method: :post do %>
+          <i class="fa fa-envelope"></i>
+          <% end %>
+        </div>
     </div>
-  </div>
-  <%# </div> %>
-  <%# <div class="justify-content-space-between card-product"> %>
-  <div class="row">
-    <div class="col-7 garden-details">
+
+    <div class=" garden-details">
+
       <% @garden_products.each do |garden_product| %>
-        <p>Description de <%= garden_product.product.name %>:</p>
-        <p><%= garden_product.detail_product%></p> <br>
+        <p><strong><%= garden_product.product.name.capitalize %></strong></p>
+        <p id="size-details"><%= garden_product.detail_product%></p>
         <p>Quantité: <%= garden_product.quantity%> Kg </p>
       <% end %>
     </div>
-    <div class="col-5 caroussel-garden gardener"> <%= render "shared/caroussel", images_produits: @images_produits, caroussel_class: @caroussel_class %>
+
+    <div class="caroussel-garden gardener">
+      <%= render "shared/caroussel", images_produits: @images_produits, caroussel_class: @caroussel_class %>
     </div>
   </div>
-  <div class="row">
+
     <div class= "col-12 reviews">
-      <h5><strong>LES AVIS</strong></h5>
-      <p>Robert de Nice</p>
+    <br>
+      <h5><strong>LES AVIS  </strong></h5>
+      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
       <p> Super rencontre ! les tomates sont pleines de saveurs, humm un vrai délice!
       Foncez!</p>
+      <br>
     </div>
-  </div>
-  <div class="row">
+
     <div class="col-12" id= "mapbox-div"
       data-controller="mapbox"
       data-mapbox-markers-value="<%= @markers.to_json %>"
       data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-  </div>
 </div>
